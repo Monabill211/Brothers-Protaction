@@ -68,12 +68,9 @@ export default function Footer() {
       
 
             <h2
-              style={{
-                fontSize: "28px",
-                fontWeight: "900",
-              }}
+            className="text-primary text-3xl font-extrabold"
             >
-              كاربروجيني
+BROTHERS PROTACTION
             </h2>
           </div>
 
@@ -108,7 +105,7 @@ export default function Footer() {
                     transition: "0.3s",
                     cursor: "pointer",
                   }}
-                  className="hover:bg-[#C8A84B] hover:text-black"
+                  className="hover:bg-[#c84b4b] hover:text-black"
                 >
                   <Icon
                     style={{
@@ -151,9 +148,9 @@ export default function Footer() {
             <span
               key={item}
               onClick={() => scrollTo("services")}
-              className="hover:text-[#C8A84B] transition-all duration-300 cursor-pointer"
+              className= "text-[#918585] hover:text-primary  "
+
               style={{
-                color: "rgba(255,255,255,0.6)",
                 fontSize: "15px",
                 width: "max-content",
               }}
@@ -192,9 +189,8 @@ export default function Footer() {
             <span
               key={item.label}
               onClick={() => scrollTo(item.id)}
-              className="hover:text-[#C8A84B] transition-all duration-300 cursor-pointer"
+              className= "text-[#918585] hover:text-primary transition-all duration-300 hover:-translate-x-2 cursor-pointer  "
               style={{
-                color: "rgba(255,255,255,0.6)",
                 fontSize: "15px",
                 width: "max-content",
               }}
@@ -225,57 +221,55 @@ export default function Footer() {
 
           <a
             href="#"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <AddLocationAltIcon
+                        className="text-primary"
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             جمهورية مصر العربية
           </a>
           <a
             href="#"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <AddLocationAltIcon
+                        className="text-primary"
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             جمهورية مصر العربية
           </a>
           <a
             href="#"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <AddLocationAltIcon
+                        className="text-primary"
+
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             جمهورية مصر العربية
@@ -283,19 +277,18 @@ export default function Footer() {
 
           <a
             href="tel:+201021219588"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <CallIcon
+                        className="text-primary"
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             01021219588
@@ -303,19 +296,18 @@ export default function Footer() {
 
           <a
             href="mailto:info@carprogeny.com"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <AttachEmailIcon
+                        className="text-primary"
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             info@carprogeny.com
@@ -323,37 +315,39 @@ export default function Footer() {
 
           <a
             href="https://wa.me/201021219588"
-            className="hover:text-[#C8A84B] transition-all duration-300"
+            className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
+             
             }}
           >
             <WhatsAppIcon
+                        className="text-primary"
+
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             واتساب مباشر
           </a>
 
           <div
+                      className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
+
             style={{
               display: "flex",
               alignItems: "center",
               gap: "12px",
-              color: "rgba(255,255,255,0.6)",
             }}
           >
             <AccessTimeIcon
+            className="text-primary"
               style={{
                 ...contactIconStyle,
-                background: "rgba(200,168,75,0.12)",
-                color: "#C8A84B",
+                background: "rgba(200,0,0,0.12)",
               }}
             />
             يوميًا من 12 ظهرًا حتى 10 مساءً
@@ -389,7 +383,7 @@ export default function Footer() {
             color: "rgba(255,255,255,0.4)",
           }}
         >
-          © 2026 كاربروجيني — جميع الحقوق محفوظة.
+          © 2026 BROTHERS PROTACTION — جميع الحقوق محفوظة.
         </p>
 
         <p
@@ -420,7 +414,7 @@ export default function Footer() {
             margin:"auto",
           }}
         >
-Developed by <a style={{padding:"5px"}} href="https://mohamedelhemaya.com" className="bg-[#C8A84B] text-black font-bold hover:bg-[#a8883b] rounded-2xl transition-all duration-300">MoSalah</a>
+Developed by <a style={{padding:"5px"}} href="" className="bg-primary text-black font-bold hover:bg-[#a83b3b] rounded-2xl transition-all duration-300">MoSalah</a>
         </p>
 
        

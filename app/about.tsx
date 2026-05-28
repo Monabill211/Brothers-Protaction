@@ -44,7 +44,7 @@ export default function AboutSection() {
             flex: 1,
           }}
         >
-          كاربروجيني هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة
+          برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة
           في صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا
           بتقديم حلول مبتكرة ومتطورة في مجالات أفلام الحماية والعزل
           الحراري وتقنيات النانو والعناية الفائقة بالسيارات.
@@ -60,7 +60,7 @@ export default function AboutSection() {
         >
           <img
             src="\img\623250-بوجاتى-تشيرون.webp"
-            alt="سيارة كاربروجيني"
+            alt="سيارة "
             className="w-full object-cover"
           />
         </div>
@@ -68,9 +68,8 @@ export default function AboutSection() {
 
       {/* العنوان */}
       <p
-        className="text-center font-bold"
+        className="text-center font-bold text-primary-dark"
         style={{
-          color: "rgba(200,168,75,0.7)",
           marginBottom: "8px",
           letterSpacing: "3px",
           fontSize: "12px",
@@ -86,7 +85,8 @@ export default function AboutSection() {
           marginBottom: "50px",
         }}
       >
-        لماذا <span style={{ color: "#C8A84B" }}>كاربروجيني؟</span>
+        لماذا <span className="text-primary">Brothers Protaction
+</span>
       </h2>
 
       {/* الكروت */}
@@ -122,7 +122,7 @@ export default function AboutSection() {
                 fontSize: "90px",
                 fontWeight: "900",
                 lineHeight: "1",
-                color: "rgba(200,168,75,0.1)",
+                color: "rgba(200,0,0,0.1)",
                 userSelect: "none",
               }}
             >
@@ -130,10 +130,8 @@ export default function AboutSection() {
             </span>
 
             <div
+            className="bg-primary-light w-9 h-0.5"
               style={{
-                width: "35px",
-                height: "2px",
-                background: "#C8A84B",
                 borderRadius: "999px",
                 marginBottom: "20px",
               }}
@@ -165,19 +163,18 @@ export default function AboutSection() {
       {/* الزر */}
       <div className="text-center">
         <a
+        className="bg-primary text-white rounded-2xl  "
           href="#contact"
           style={{
-            background: "#C8A84B",
-            color: "#0d0d0e",
             padding: "14px 40px",
-            borderRadius: "14px",
             fontWeight: "900",
             fontSize: "16px",
             display: "inline-block",
             transition: "0.3s",
           }}
         >
-          تعرف على كاربروجيني
+          تعرف على BROTHERS PROTACTION
+
         </a>
       </div>
     </section>

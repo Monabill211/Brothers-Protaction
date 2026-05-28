@@ -46,8 +46,8 @@ export default function ReviewsSection() {
         }}
       >
         <p
+        className="text-primary"
           style={{
-            color: "rgba(200,168,75,0.7)",
             letterSpacing: "3px",
             fontSize: "12px",
             marginBottom: "10px",
@@ -57,7 +57,7 @@ export default function ReviewsSection() {
           CLIENT REVIEWS
         </p>
 
-        <h1
+        <h2
           style={{
             fontSize: "48px",
             fontWeight: "900",
@@ -65,8 +65,8 @@ export default function ReviewsSection() {
             marginBottom: "14px",
           }}
         >
-          آراء <span style={{ color: "#C8A84B" }}>عملائنا</span>
-        </h1>
+          آراء <span className="text-primary" >عملائنا</span>
+        </h2>
       </div>
 
       {/* Slider */}
@@ -89,11 +89,12 @@ export default function ReviewsSection() {
               >
                 {[...Array(5)].map((_, index) => (
                   <span
+                  className="text-primary"
                     key={index}
                     style={{
                       color:
                         index < item.rating
-                          ? "#C8A84B"
+                          ? "#df3939"
                           : "rgba(255,255,255,0.2)",
                       fontSize: "22px",
                     }}
@@ -155,7 +156,7 @@ export default function ReviewsSection() {
 
         .review-card:hover {
           transform: translateY(-10px);
-          border-color: rgba(200, 168, 75, 0.3);
+          border-color: rgba(200, 0, 0, 0.3);
           background: rgba(255, 255, 255, 0.05);
         }
 
@@ -183,13 +184,13 @@ export default function ReviewsSection() {
           display: flex;
           align-items: center;
           gap: 6px;
-          color: #c8a84b;
+          color: #df3939;
           font-size: 14px;
         }
 
         .quote {
           font-size: 70px;
-          color: rgba(200, 168, 75, 0.1);
+          color: rgba(200, 0, 0, 0.1);
           line-height: 1;
           font-weight: 900;
         }

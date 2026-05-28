@@ -17,12 +17,12 @@ export default function HeroPage() {
       {/* Content — في النص */}
       <div className="relative z-10 text-center text-white px-4 flex flex-col items-center gap-6">
         
-        <h1 className="text-5xl md:text-7xl font-black">
-          برازر برودكشن
+        <h1 className="text-5xl md:text-7xl font-black text-primary-dark">
+                BROTHERS PROTACTION
         </h1>
 
         <h2 className="text-lg md:text-2xl font-semibold text-white/80 max-w-xl">
-          برازر برودكشن هي أكبر شركة أفلام حماية في مصر
+                         BROTHERS PROTACTION هي أكبر شركة أفلام حماية في مصر
         </h2>
 
         {/* Stats */}
@@ -30,13 +30,13 @@ export default function HeroPage() {
           {[
             { label: "عميل راضٍ", value: "+1000" },
             { label: "سنوات خبرة", value: "+10" },
-            { label: "تقييم العملاء", value: "5★" },
+            { label: "تقييم العملاء", value: "4.7★" },
           ].map((s) => (
             <div
               key={s.label}
               className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-8 py-4 text-center min-w-[120px]"
             >
-              <span className="block text-3xl font-black text-yellow-400">
+              <span className="block text-3xl font-black text-primary">
                 {s.value}
               </span>
               <span className="block text-sm text-white/70 mt-1 font-semibold">

@@ -25,7 +25,7 @@ export default function Booking() {
         }}
       >
         <p
-          className="text-[#C8A84B]/70 tracking-[4px] text-xs font-bold"
+          className="text-primary/70 tracking-[4px] text-xs font-bold"
           style={{
             marginBottom: "12px",
           }}
@@ -39,11 +39,12 @@ export default function Booking() {
             marginBottom: "20px",
           }}
         >
-          احجز <span className="text-[#C8A84B]">موعدك الآن</span>
+          احجز <span className="text-primary">موعدك الآن</span>
         </h2>
 
         <p
           className="text-white/60 text-sm md:text-base max-w-2xl mx-auto leading-8 text-center "
+          style={{margin:"auto"}}
         >
           احجز خدمة حماية أو عناية كاملة لسيارتك وسيتم التواصل معك من فريق
           كاربروجيني لتأكيد الحجز.
@@ -269,7 +270,7 @@ export default function Booking() {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-[#C8A84B] text-black font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
+              className="w-full bg-primary text-white font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
               style={{
                 height: "60px",
                 borderRadius: "999px",
@@ -296,13 +297,7 @@ export default function Booking() {
               padding: "35px",
             }}
           >
-            <DirectionsCarFilledIcon
-              className="text-[#C8A84B]"
-              style={{
-                fontSize: "55px",
-                marginBottom: "20px",
-              }}
-            />
+            <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt="carprogeny logo" className="w-12 mb-4" />
 
             <h2
               className="text-3xl font-black"
@@ -360,7 +355,7 @@ export default function Booking() {
           ].map((item, i) => (
             <a key={i} href={item.link}>
               <div
-                className="flex justify-between items-center bg-[#111111] border border-white/10 hover:border-[#C8A84B]/40 hover:bg-[#161616] transition-all duration-300 hover:-translate-x-2"
+                className="flex justify-between items-center bg-[#111111] border border-white/10 hover:border-primary-light/40 hover:bg-[#161616] transition-all duration-300 hover:-translate-x-2"
                 style={{
                   gap: "16px",
                   padding: "20px",
@@ -383,7 +378,7 @@ export default function Booking() {
                 </div>
 
                 <div
-                  className="bg-[#C8A84B]/10 text-[#C8A84B] flex items-center justify-center"
+                  className="bg-primary/10 text-primary flex items-center justify-center"
                   style={{
                     width: "56px",
                     height: "56px",
