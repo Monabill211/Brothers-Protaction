@@ -10,6 +10,7 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import Link from "next/link";
 
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -180,23 +181,23 @@ BROTHERS PROTACTION
           </h3>
 
           {[
-            { label: "الرئيسية", id: "hero" },
+            { label: "الرئيسية", id: "/" },
             { label: "من نحن", id: "about" },
             { label: "الخدمات", id: "services" },
             { label: "أعمالنا", id: "gallery" },
             { label: "تواصل معنا", id: "contact" },
           ].map((item) => (
-            <span
-              key={item.label}
-              onClick={() => scrollTo(item.id)}
-              className= "text-[#918585] hover:text-primary transition-all duration-300 hover:-translate-x-2 cursor-pointer  "
-              style={{
+            <Link href={item.id} key={item.label}>
+              <span
+                className= "text-[#918585] hover:text-primary transition-all duration-300 hover:-translate-x-2 cursor-pointer  "
+                style={{
                 fontSize: "15px",
                 width: "max-content",
               }}
             >
               {item.label}
             </span>
+            </Link>
           ))}
         </div>
 

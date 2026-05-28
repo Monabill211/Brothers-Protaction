@@ -24,7 +24,7 @@ export default function Navbar() {
     { label: "عن الشركة", id: "about" },
     { label: "خدماتنا", id: "services" },
     { label: "آراء العملاء", id: "reviews" },
-    { label: "احجز الآن", id: "contact" },
+    { label: " تواصل معانا", id: "contact" },
   ];
 
   return (

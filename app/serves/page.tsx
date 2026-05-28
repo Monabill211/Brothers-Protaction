@@ -12,3 +12,8 @@ export default function page() {
     </>
   )
 }
+"use client";
+
+import { motion } from "framer-motion";
+
+
