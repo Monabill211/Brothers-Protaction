@@ -1,6 +1,5 @@
 "use client";
 import { useInView } from "react-intersection-observer";
-
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 

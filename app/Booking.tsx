@@ -11,7 +11,7 @@ import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 export default function Booking() {
   return (
     <motion.section
-      initial={{
+        initial={{
         opacity: 0,
       }}
       whileInView={{
@@ -21,12 +21,13 @@ export default function Booking() {
         duration: 1,
       }}
       viewport={{ once: true }}
-      id="contact"
+      id="Booking"
       dir="rtl"
       className="bg-[#0a0a0a] text-white overflow-hidden"
       style={{
         padding: "100px 16px",
       }}
+   
     >
       {/* Heading */}
       <motion.div

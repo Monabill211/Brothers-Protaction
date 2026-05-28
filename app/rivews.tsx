@@ -31,6 +31,7 @@ export default function ReviewsSection() {
   return (
     <section
       dir="rtl"
+      id="reviews"
       style={{
         background: "#0a0a0a",
         padding: "100px 0",

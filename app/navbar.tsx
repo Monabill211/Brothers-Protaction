@@ -23,7 +23,7 @@ export default function Navbar() {
     { label: "الرئيسية", id: "/" },
     { label: "عن الشركة", id: "about" },
     { label: "خدماتنا", id: "services" },
-    { label: "آراء العملاء", id: "reviews" },
+    { label: "آراء العملاء", id: "/#/#reviews" },
     { label: " تواصل معانا", id: "contact" },
   ];
 
