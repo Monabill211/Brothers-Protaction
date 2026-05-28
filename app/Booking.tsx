@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import CallIcon from "@mui/icons-material/Call";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
@@ -9,7 +10,17 @@ import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 
 export default function Booking() {
   return (
-    <section
+    <motion.section
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{ once: true }}
       id="contact"
       dir="rtl"
       className="bg-[#0a0a0a] text-white overflow-hidden"
@@ -18,7 +29,19 @@ export default function Booking() {
       }}
     >
       {/* Heading */}
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 80,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        viewport={{ once: true }}
         className="text-center"
         style={{
           marginBottom: "70px",
@@ -44,23 +67,37 @@ export default function Booking() {
 
         <p
           className="text-white/60 text-sm md:text-base max-w-2xl mx-auto leading-8 text-center "
-          style={{margin:"auto"}}
+          style={{ margin: "auto" }}
         >
           احجز خدمة حماية أو عناية كاملة لسيارتك وسيتم التواصل معك من فريق
           كاربروجيني لتأكيد الحجز.
         </p>
-      </div>
+      </motion.div>
 
       {/* Main */}
       <div
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-center"
         style={{
           gap: "40px",
-          margin:"auto",
+          margin: "auto",
         }}
       >
         {/* Form */}
-        <div
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: -120,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
           className="w-full max-w-3xl bg-[#111111] border border-white/10 rounded-[30px] shadow-2xl"
           style={{
             padding: "40px",
@@ -102,7 +139,7 @@ export default function Booking() {
                 <input
                   type="text"
                   placeholder="اكتب اسمك هنا..."
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -124,7 +161,7 @@ export default function Booking() {
                 <input
                   type="tel"
                   placeholder="اكتب رقم هاتفك..."
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -154,7 +191,7 @@ export default function Booking() {
                 <input
                   type="text"
                   placeholder="BMW M4"
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -174,7 +211,7 @@ export default function Booking() {
                 </label>
 
                 <select
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-primary"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -209,7 +246,7 @@ export default function Booking() {
 
                 <input
                   type="date"
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -229,7 +266,7 @@ export default function Booking() {
                 </label>
 
                 <select
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
@@ -259,7 +296,7 @@ export default function Booking() {
               <textarea
                 rows={5}
                 placeholder="اكتب أي تفاصيل إضافية..."
-                className="w-full resize-none border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#C8A84B]"
+                className="w-full resize-none border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                 style={{
                   borderRadius: "24px",
                   padding: "20px",
@@ -281,23 +318,45 @@ export default function Booking() {
               <SendIcon />
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Info */}
-        <div
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 120,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.2,
+          }}
+          viewport={{ once: true }}
           className="flex flex-col w-full max-w-md"
           style={{
             gap: "20px",
           }}
         >
           {/* Card */}
-          <div
+          <motion.div
+            whileHover={{
+              y: -8,
+            }}
             className="bg-[#111111] border border-white/10 rounded-[28px]"
             style={{
               padding: "35px",
             }}
           >
-            <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt="carprogeny logo" className="w-12 mb-4" />
+            <img
+              src="\img\452863198_122094958910449527_15294905101800547_n.png"
+              alt="carprogeny logo"
+              className="w-12 mb-4"
+            />
 
             <h2
               className="text-3xl font-black"
@@ -312,7 +371,7 @@ export default function Booking() {
               نستخدم أحدث تقنيات الحماية والعناية للحفاظ على سيارتك بأفضل شكل
               ممكن مع خامات عالمية وضمان حقيقي.
             </p>
-          </div>
+          </motion.div>
 
           {/* Contact Cards */}
           {[
@@ -340,20 +399,24 @@ export default function Booking() {
               icon: <AddLocationAltIcon />,
               link: "#",
             },
-            {
-              title: "العنوان",
-              value: "جمهورية مصر العربية",
-              icon: <AddLocationAltIcon />,
-              link: "#",
-            },
-            {
-              title: "العنوان",
-              value: "جمهورية مصر العربية",
-              icon: <AddLocationAltIcon />,
-              link: "#",
-            },
           ].map((item, i) => (
-            <a key={i} href={item.link}>
+            <motion.a
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: i * 0.15,
+              }}
+              viewport={{ once: true }}
+              key={i}
+              href={item.link}
+            >
               <div
                 className="flex justify-between items-center bg-[#111111] border border-white/10 hover:border-primary-light/40 hover:bg-[#161616] transition-all duration-300 hover:-translate-x-2"
                 style={{
@@ -390,10 +453,10 @@ export default function Booking() {
                   {item.icon}
                 </div>
               </div>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

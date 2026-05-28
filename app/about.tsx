@@ -1,3 +1,9 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+
+import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
+
 const reasons = [
   {
     num: "1",
@@ -17,6 +23,11 @@ const reasons = [
 ];
 
 export default function AboutSection() {
+   const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
     <section
       id="about"
@@ -27,7 +38,19 @@ export default function AboutSection() {
       }}
     >
       {/* الجزء الأول */}
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 80,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        viewport={{ once: true }}
         className="flex flex-col md:flex-row items-center"
         style={{
           maxWidth: "1100px",
@@ -35,7 +58,21 @@ export default function AboutSection() {
           gap: "40px",
         }}
       >
-        <p
+        <motion.p
+          initial={{
+            opacity: 0,
+            x: -100,
+            filter: "blur(10px)",
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
           className="text-right"
           style={{
             fontSize: "14px",
@@ -44,13 +81,39 @@ export default function AboutSection() {
             flex: 1,
           }}
         >
-          برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة
-          في صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا
-          بتقديم حلول مبتكرة ومتطورة في مجالات أفلام الحماية والعزل
-          الحراري وتقنيات النانو والعناية الفائقة بالسيارات.
-        </p>
-
-        <div
+         <div ref={ref}>
+      {inView && (
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(
+                "برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة في صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا بتقديم حلول مبتكرة ومتطورة في مجالات أفلام الحماية والعزل الحراري وتقنيات النانو والعناية الفائقة بالسيارات."
+              )
+              .start();
+          }}
+          options={{
+            cursor: "",
+            delay: 20,
+          }}
+        />
+      )}
+    </div>
+        </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 100,
+            scale: 0.9,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
           style={{
             borderRadius: "20px",
             overflow: "hidden",
@@ -63,31 +126,45 @@ export default function AboutSection() {
             alt="سيارة "
             className="w-full object-cover"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* العنوان */}
-      <p
-        className="text-center font-bold text-primary-dark"
-        style={{
-          marginBottom: "8px",
-          letterSpacing: "3px",
-          fontSize: "12px",
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 60,
         }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        viewport={{ once: true }}
       >
-        OUR STORY
-      </p>
+        <p
+          className="text-center font-bold text-primary-dark"
+          style={{
+            marginBottom: "8px",
+            letterSpacing: "3px",
+            fontSize: "12px",
+          }}
+        >
+          OUR STORY
+        </p>
 
-      <h2
-        className="text-center font-black"
-        style={{
-          fontSize: "48px",
-          marginBottom: "50px",
-        }}
-      >
-        لماذا <span className="text-primary">Brothers Protaction
-</span>
-      </h2>
+        <h2
+          className="text-center font-black"
+          style={{
+            fontSize: "48px",
+            marginBottom: "50px",
+          }}
+        >
+          لماذا <span className="text-primary">Brothers Protaction</span>
+        </h2>
+      </motion.div>
 
       {/* الكروت */}
       <div
@@ -101,8 +178,27 @@ export default function AboutSection() {
         }}
       >
         {reasons.map((r, index) => (
-          <div
+          <motion.div
             key={r.num}
+            initial={{
+              opacity: 0,
+              y: 80,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.2,
+            }}
+            viewport={{ once: true }}
+            whileHover={{
+              y: -10,
+              backgroundColor: "#131313",
+            }}
             style={{
               position: "relative",
               background: "#0d0d0e",
@@ -129,8 +225,19 @@ export default function AboutSection() {
               {r.num}
             </span>
 
-            <div
-            className="bg-primary-light w-9 h-0.5"
+            <motion.div
+              initial={{
+                width: 0,
+              }}
+              whileInView={{
+                width: 36,
+              }}
+              transition={{
+                delay: 0.4 + index * 0.2,
+                duration: 0.5,
+              }}
+              viewport={{ once: true }}
+              className="bg-primary-light h-0.5"
               style={{
                 borderRadius: "999px",
                 marginBottom: "20px",
@@ -156,27 +263,39 @@ export default function AboutSection() {
             >
               {r.body}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* الزر */}
-      <div className="text-center">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
         <a
-        className="bg-primary text-white rounded-2xl  "
+          className="bg-primary text-white rounded-2xl hover:scale-105 transition-all duration-500"
           href="#contact"
           style={{
             padding: "14px 40px",
             fontWeight: "900",
             fontSize: "16px",
             display: "inline-block",
-            transition: "0.3s",
           }}
         >
           تعرف على BROTHERS PROTACTION
-
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

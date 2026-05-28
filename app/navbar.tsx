@@ -6,6 +6,7 @@ import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { label: "الرئيسية", id: "home" },
+    { label: "الرئيسية", id: "/" },
     { label: "عن الشركة", id: "about" },
     { label: "خدماتنا", id: "services" },
     { label: "آراء العملاء", id: "reviews" },
@@ -101,9 +102,12 @@ export default function Navbar() {
             }}
           >
             {menuItems.map((item) => (
+              <Link
+                key={item.id}
+                href={item.id} >
               <button
                 key={item.id}
-                onClick={() => scrollTo(item.id)}
+                // onClick={() => scrollTo(item.id)}
                 className="font-bold transition-all cursor-pointer duration-300 hover:bg-[#b91d1d8c] hover:text-primary"
                 style={{
                   color: "rgba(255,255,255,0.82)",
@@ -115,6 +119,7 @@ export default function Navbar() {
               >
                 {item.label}
               </button>
+              </Link>
             ))}
           </nav>
 
@@ -128,7 +133,7 @@ export default function Navbar() {
           >
             <a
               href="https://wa.me/201021219588"
-              className="transition-all duration-300 hover:-translate-y-1"
+              className="transition-all duration-300 hover:-translate-y-1 text-primary"
               style={{
                 width: "46px",
                 height: "46px",
@@ -138,11 +143,11 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#25D366",
-                fontSize: "24px",
+              
+              
               }}
             >
-              W
+              <WhatsAppIcon />
             </a>
 
             <button
