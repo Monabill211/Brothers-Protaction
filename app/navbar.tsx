@@ -23,7 +23,7 @@ export default function Navbar() {
     { label: "الرئيسية", id: "/" },
     { label: "عن الشركة", id: "about" },
     { label: "خدماتنا", id: "services" },
-    { label: "آراء العملاء", id: "/#/#reviews" },
+    { label: " أعمالنا", id: "gallery" },
     { label: " تواصل معانا", id: "contact" },
   ];
 
@@ -149,7 +149,7 @@ export default function Navbar() {
             >
               <WhatsAppIcon />
             </a>
-
+<Link href="/#Booking" >
             <button
               onClick={() => scrollTo("contact")}
               className="font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-1 bg-primary cursor-pointer"
@@ -164,6 +164,7 @@ export default function Navbar() {
             >
               احجز موعدك الآن
             </button>
+            </Link>
           </div>
 
           {/* ================= MOBILE BUTTON ================= */}

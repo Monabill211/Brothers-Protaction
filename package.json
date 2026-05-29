@@ -19,6 +19,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "19.2.4",
     "react-intersection-observer": "^10.0.3",
+    "swiper": "^12.2.0",
     "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {

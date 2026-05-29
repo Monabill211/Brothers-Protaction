@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "../navbar";
 import Footer from "../Footer";
+import { section } from "framer-motion/client";
 
 const services = [
   {
@@ -11,6 +12,7 @@ const services = [
     body:
       "حماية كاملة لطلاء السيارة ضد الخدوش والعوامل الخارجية باستخدام خامات عالمية عالية الجودة.",
     image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    section: "/aflam-ppf",
   },
 
   {
@@ -18,6 +20,7 @@ const services = [
     body:
       "تقليل حرارة الشمس داخل السيارة مع الحفاظ على الرؤية والشكل الفخم للسيارة.",
     image: "/img/623250-بوجاتى-تشيرون.webp",
+    section: "/thermal-insulation",
   },
 
   {
@@ -25,6 +28,8 @@ const services = [
     body:
       "طبقة حماية ولمعان قوية تحافظ على الطلاء وتعطي السيارة مظهرًا احترافيًا دائمًا.",
     image: "/img/452863198_122094958910449527_15294905101800547_n.png",
+    section: "/nano-ceramic",
+
   },
 
   {
@@ -32,6 +37,8 @@ const services = [
     body:
       "إزالة الخدوش والعيوب البسيطة واستعادة لمعان السيارة بأحدث تقنيات التلميع.",
     image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    section: "/tliming",
+
   },
 ];
 
@@ -174,6 +181,9 @@ export default function page() {
               >
                 احجز الخدمة
               </button></Link>
+              {item.section && (
+
+              <Link href={item.section} >
               <button
                 className="bg-primary text-white font-bold hover:scale-105 transition-all duration-300"
                 style={{
@@ -185,6 +195,8 @@ export default function page() {
               >
                  ما هو {item.title}؟
               </button>
+             
+              </Link> )}
             </div>
 
             {/* Hover Glow */}
