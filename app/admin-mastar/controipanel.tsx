@@ -23,13 +23,13 @@ const links = [
   {
     title: "الفرع الثاني",
     href: "/admin-mastar/far32",
-    icon: <DirectionsCarIcon />,
+    icon: <StorefrontIcon />,
   },
 
   {
     title: "الفرع الثالث",
         href: "/admin-mastar/far33",
-    icon: <AutoAwesomeIcon />,
+    icon: <StorefrontIcon />,
   },
 
   {
