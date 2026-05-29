@@ -1,28 +1,54 @@
 "use client";
 
-import React from "react";
 import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const reviews = [
   {
     name: "أحمد علي",
     car: "BMW M4",
     review:
-      "الخدمة كانت ممتازة جدًا والتركيب نضيف بشكل احترافي والعربية فرق شكلها تمامًا بعد فيلم الحماية.",
+      "الخدمة كانت ممتازة جدًا والتركيب احترافي والعربية فرق شكلها تمامًا بعد فيلم الحماية.",
     rating: 5,
   },
+
   {
-    name: "محمد صلاح",
+    name: "محمد خالد",
     car: "Mercedes C200",
     review:
-      "العزل الحراري ممتاز والخامات فعلًا أصلية والتعامل محترم جدًا من أول الحجز لحد التسليم.",
+      "العزل الحراري ممتاز والخامات أصلية جدًا والتعامل راقي من أول الحجز للتسليم.",
     rating: 5,
   },
+
   {
-    name: "عمر خالد",
-    car: "Audi RS5",
+    name: "عمر أشرف",
+    car: "Audi RS7",
     review:
-      "أفضل مكان جربته في حماية السيارات، التفاصيل والاهتمام بالعربية كان فوق الممتاز.",
+      "أفضل مكان جربته في حماية السيارات، اهتمام بالتفاصيل بشكل رهيب.",
+    rating: 5,
+  },
+
+  {
+    name: "كريم طارق",
+    car: "Porsche 911",
+    review:
+      "الشغل نضيف جدًا والخدمة فوق الممتازة وفعلًا العربية بقت مختلفة.",
+    rating: 5,
+  },
+
+  {
+    name: "يوسف محمد",
+    car: "Range Rover",
+    review:
+      "النانو سيراميك ممتاز ولمعة العربية فضلت ثابتة بشكل محترم جدًا.",
     rating: 5,
   },
 ];
@@ -31,55 +57,83 @@ export default function ReviewsSection() {
   return (
     <section
       dir="rtl"
-      id="reviews"
+      className="bg-[#0a0a0a] text-white overflow-hidden"
       style={{
-        background: "#0a0a0a",
-        padding: "100px 0",
-        overflow: "hidden",
+        padding: "120px 20px",
       }}
     >
-      {/* Title */}
+      {/* Heading */}
       <div
+        className="text-center"
         style={{
-          textAlign: "center",
           marginBottom: "70px",
-          padding: "0 20px",
         }}
       >
         <p
-        className="text-primary"
+          className="text-primary tracking-[4px] text-xs font-bold"
           style={{
-            letterSpacing: "3px",
-            fontSize: "12px",
-            marginBottom: "10px",
-            fontWeight: "700",
+            marginBottom: "12px",
           }}
         >
           CLIENT REVIEWS
         </p>
 
         <h2
+          className="text-4xl md:text-6xl font-black"
           style={{
-            fontSize: "48px",
-            fontWeight: "900",
-            color: "#fff",
-            marginBottom: "14px",
+            marginBottom: "20px",
           }}
         >
-          آراء <span className="text-primary" >عملائنا</span>
+          آراء <span className="text-primary">عملائنا</span>
         </h2>
+
+        <p className="text-white/60 max-w-2xl mx-auto leading-8">
+          تقييمات وتجارب عملائنا بعد خدمات الحماية والعناية الاحترافية.
+        </p>
       </div>
 
-      {/* Slider */}
-      <div
-        style={{
-          width: "100%",
-          overflow: "hidden",
+      {/* Swiper */}
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={3}
+        spaceBetween={30}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 150,
+          modifier: 2,
+          slideShadows: false,
+          scale: 0.9,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+
+          768: {
+            slidesPerView: 2,
+          },
+
+          1200: {
+            slidesPerView: 3,
+          },
+        }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="reviewSwiper"
       >
-        <div className="slider-track">
-          {[...reviews, ...reviews].map((item, i) => (
-            <div key={i} className="review-card">
+        {reviews.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="review-card">
               {/* Stars */}
               <div
                 style={{
@@ -88,15 +142,11 @@ export default function ReviewsSection() {
                   marginBottom: "18px",
                 }}
               >
-                {[...Array(5)].map((_, index) => (
+                {[...Array(item.rating)].map((_, index) => (
                   <span
-                  className="text-primary"
                     key={index}
+                    className="text-primary"
                     style={{
-                      color:
-                        index < item.rating
-                          ? "#df3939"
-                          : "rgba(255,255,255,0.2)",
                       fontSize: "22px",
                     }}
                   >
@@ -127,37 +177,35 @@ export default function ReviewsSection() {
                 <span className="quote">”</span>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* CSS */}
       <style jsx>{`
-        .slider-track {
-          display: flex;
-          width: max-content;
-          gap: 25px;
-          animation: marquee 18s linear infinite;
+        .reviewSwiper {
+          width: 100%;
+          padding-top: 20px;
+          padding-bottom: 70px;
         }
 
-        .slider-track:hover {
-          animation-play-state: paused;
+        .reviewSwiper :global(.swiper-slide) {
+          width: auto !important;
         }
 
         .review-card {
-          width: 380px;
-          flex-shrink: 0;
           background: rgba(255, 255, 255, 0.03);
           border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 26px;
+          border-radius: 28px;
           padding: 35px;
           backdrop-filter: blur(10px);
-          transition: 0.4s;
+          transition: 0.5s;
+          min-height: 300px;
         }
 
         .review-card:hover {
           transform: translateY(-10px);
-          border-color: rgba(200, 0, 0, 0.3);
+          border-color: rgba(223, 57, 57, 0.4);
           background: rgba(255, 255, 255, 0.05);
         }
 
@@ -165,7 +213,7 @@ export default function ReviewsSection() {
           color: rgba(255, 255, 255, 0.7);
           line-height: 2;
           font-size: 15px;
-          margin-bottom: 30px;
+          margin-bottom: 35px;
         }
 
         .user-box {
@@ -176,8 +224,8 @@ export default function ReviewsSection() {
 
         .user-name {
           color: #fff;
-          font-size: 18px;
-          font-weight: 800;
+          font-size: 20px;
+          font-weight: 900;
           margin-bottom: 6px;
         }
 
@@ -187,25 +235,58 @@ export default function ReviewsSection() {
           gap: 6px;
           color: #df3939;
           font-size: 14px;
+          font-weight: 700;
         }
 
         .quote {
           font-size: 70px;
-          color: rgba(200, 0, 0, 0.1);
+          color: rgba(223, 57, 57, 0.12);
           line-height: 1;
           font-weight: 900;
         }
 
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
+        .reviewSwiper :global(.swiper-pagination-bullet) {
+          background: rgba(255, 255, 255, 0.3);
+          width: 10px;
+          height: 10px;
+          opacity: 1;
+        }
+
+        .reviewSwiper
+          :global(.swiper-pagination-bullet-active) {
+          background: #df3939;
+          width: 28px;
+          border-radius: 999px;
+        }
+
+        @media (max-width: 768px) {
+          .review-card {
+            padding: 25px;
+            min-height: 270px;
           }
 
-          100% {
-            transform: translateX(calc(-405px * 3));
+          .user-name {
+            font-size: 18px;
+          }
+
+          .review-text {
+            font-size: 14px;
           }
         }
+
       `}</style>
+      <style jsx global>{`
+  .swiper-pagination-bullet {
+    background: rgba(223, 57, 57, 0.35) !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #df3939 !important;
+    width: 28px !important;
+    border-radius: 999px !important;
+  }
+`}</style>
     </section>
   );
 }
