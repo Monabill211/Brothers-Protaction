@@ -14,28 +14,21 @@ export default function page() {
   {
     country: "مصر",
     city: "القاهرة",
-    address: "قطعة 92 المنطقة الصناعية - التجمع الخامس",
+    address: "   المهندسين، القاهرة، مصر",
     map:
       "https://www.google.com/maps?q=30.0275,31.4913&z=15&output=embed",
   },
   {
-    country: "المملكة العربية السعودية",
-    city: "الرياض",
-    address: "قطعة 250 - حي القادسية",
-    map:
-      "https://www.google.com/maps?q=24.8307,46.7866&z=15&output=embed",
-  },
-  {
     country: "مصر",
-    city: "المنصورة",
-    address: "شارع سعد زغلول - توريل",
+    city: "القاهرة",
+    address: "التجمع الخامس، القاهرة، مصر",
     map:
       "https://www.google.com/maps?q=31.0409,31.3785&z=15&output=embed",
   },
   {
     country: "مصر",
     city: "الشيخ زايد",
-    address: "مول بيلديوم شارع المدرسة متفرع من محور 26 يوليو",
+    address: "الشيخ زايد، الجيزة، مصر",
     map:
       "https://www.google.com/maps?q=30.0128,30.9723&z=15&output=embed",
   },

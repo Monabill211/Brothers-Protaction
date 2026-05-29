@@ -236,7 +236,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            جمهورية مصر العربية
+              التجمع الخامس، القاهرة، مصر
           </a>
           <a
             href="#"
@@ -254,7 +254,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            جمهورية مصر العربية
+              الشيخ زايد، الجيزة، مصر
           </a>
           <a
             href="#"
@@ -273,7 +273,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            جمهورية مصر العربية
+              المهندسين، القاهرة، مصر
           </a>
 
           <a
@@ -296,7 +296,7 @@ BROTHERS PROTACTION
           </a>
 
           <a
-            href="mailto:info@carprogeny.com"
+            href="mailto:info@BROTHERSPROTACTION.com"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -311,7 +311,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            info@carprogeny.com
+            info@BROTHERS PROTACTION.com
           </a>
 
           <a
@@ -332,7 +332,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            واتساب مباشر
+             01021219588
           </a>
 
           <div

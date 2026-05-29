@@ -279,6 +279,7 @@ export default function Navbar() {
           }}
         >
           {menuItems.map((item) => (
+            <Link key={item.id} href={item.id}>
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
@@ -293,6 +294,7 @@ export default function Navbar() {
             >
               {item.label}
             </button>
+            </Link>
           ))}
         </nav>
 

@@ -2,6 +2,7 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import Link from "next/link";
 
 const reasons = [
   {
@@ -57,7 +58,7 @@ export default function AboutSection() {
           gap: "40px",
         }}
       >
-        <motion.p
+        <motion.div
           initial={{
             opacity: 0,
             x: -100,
@@ -97,7 +98,7 @@ export default function AboutSection() {
         />
       )}
     </div>
-        </motion.p>
+        </motion.div>
         <motion.div
           initial={{
             opacity: 0,
@@ -282,9 +283,9 @@ export default function AboutSection() {
         viewport={{ once: true }}
         className="text-center"
       >
-        <a
-          className="bg-primary text-white rounded-2xl hover:scale-105 transition-all duration-500"
-          href="#contact"
+        <Link href="/about">
+        <button
+          className="bg-primary text-white rounded-2xl hover:scale-105 transition-all duration-500 cursor-pointer"
           style={{
             padding: "14px 40px",
             fontWeight: "900",
@@ -293,7 +294,8 @@ export default function AboutSection() {
           }}
         >
           تعرف على BROTHERS PROTACTION
-        </a>
+        </button>
+        </Link>
       </motion.div>
     </section>
   );
