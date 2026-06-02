@@ -52,7 +52,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  e.preventDefaul
 ${formData.message}
 `;
 
-  const whatsappUrl = `https://wa.me/201149005778?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/201003397852?text=${encodeURIComponent(
     text
   )}`;
 
@@ -328,15 +328,15 @@ ${formData.message}
           {[
             {
               title: "رقم الهاتف",
-              value: "201149005778",
+              value: "0100 3397852",
               icon: <CallIcon />,
-              link: "tel:+201149005778",
+              link: "tel:+201003397852",
             },
             {
               title: "واتساب",
-              value: "201149005778",
+              value: "0100 3397852",
               icon: <WhatsAppIcon />,
-              link: "https://wa.me/201149005778",
+              link: "https://wa.me/201003397852",
             },
             {
               title: "البريد الإلكتروني",
@@ -487,7 +487,7 @@ flexWrap: "wrap",
                 {item.address}
               </p>
 
-              <a href="tel:+201149005778 ">
+              <a href="tel:+20100 3397852">
                 <button
                 className="w-36 h-12 bg-primary-light hover:bg-primary-dark rounded-3xl cursor-pointer text-white font-bold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
                 

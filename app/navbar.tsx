@@ -134,7 +134,7 @@ export default function Navbar() {
             }}
           >
             <a
-              href="https://wa.me/201149005778 "
+              href="https://wa.me/20100 3397852"
               className="transition-all duration-300 hover:-translate-y-1 text-primary"
               style={{
                 width: "46px",

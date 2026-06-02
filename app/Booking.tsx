@@ -228,8 +228,8 @@ export default function Booking() {
 
           {/* Contact Cards */}
           {[
-            { title: "رقم الهاتف", value: "01149005778", icon: <CallIcon />, link: "tel:+201149005778" },
-            { title: "واتساب", value: "01149005778", icon: <WhatsAppIcon />, link: "https://wa.me/201149005778" },
+            { title: "رقم الهاتف", value: "0100 3397852", icon: <CallIcon />, link: "tel:+201003397852" },
+            { title: "واتساب", value: "0100 3397852", icon: <WhatsAppIcon />, link: "https://wa.me/201003397852" },
             { title: "البريد الإلكتروني", value: "info@brothersprotection.com", icon: <AttachEmailIcon />, link: "mailto:info@brothersprotection.com" },
             { title: "فرع الشيخ زايد", value: "الشيخ زايد - محور جمال عبد الناصر - ممشي Square One", icon: <AddLocationAltIcon />, link: "https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en" },
             { title: "فرع المهندسين", value: "٦ خان يونس متفرع من شارع شهاب، الجيزة", icon: <AddLocationAltIcon />, link: "https://www.google.com/maps?q=Brothers+Protection%D8%8C+%D9%A6+%D8%AE%D8%A7%D9%86+%D9%8A%D9%88%D9%86%D8%B3+%D9%85%D8%AA%D9%81%D8%B1%D8%B9+%D9%85%D9%86+%D8%B4%D8%A7%D8%B1%D8%B9%D8%8C+%D8%B4%D9%87%D8%A7%D8%A8&ftid=0x14584100284a500f:0x72ec79e9e0de3082&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100799877,94286869&g_ep=CAISEjI2LjIxLjEuOTE3Mzg1NDY3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwNzk5ODc3LDk0Mjg2ODY5QgJFRw%3D%3D&skid=ffba94ec-0d91-440f-b1b4-e1cffb194a33&g_st=ic" },

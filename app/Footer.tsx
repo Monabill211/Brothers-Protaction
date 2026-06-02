@@ -277,7 +277,7 @@ BROTHERS PROTACTION
 المهندسين - ٦ خان يونس متفرع من شارع شهاب          </a>
 
           <a
-            href="tel:+201149005778"
+            href="tel:+201003397852"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -292,7 +292,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            01149005778
+            0100 3397852
           </a>
 
           <a
@@ -315,7 +315,7 @@ BROTHERS PROTACTION
           </a>
 
           <a
-            href="https://wa.me/201149005778"
+            href="https://wa.me/201003397852"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -332,7 +332,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-             01149005778
+             0100 3397852
           </a>
 
           <div
