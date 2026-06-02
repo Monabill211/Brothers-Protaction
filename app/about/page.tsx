@@ -122,64 +122,24 @@ export default function Page() {
                 لسيارتك
               </h2>
  
-             <div ref={ref} className="text-white/70 leading-9 text-lg"
- >
-      {inView && (
-        <Typewriter
+           <p className="text-white/70 leading-9 text-lg">
+  Brothers Protaction هي واحدة من الشركات الرائدة في مجال أفلام الحماية
+  والعناية المتكاملة بالسيارات داخل مصر. تأسست الشركة بهدف تقديم مستوى
+  احترافي عالمي يجمع بين الجودة العالية، التكنولوجيا الحديثة، والخبرة
+  الكبيرة في حماية السيارات الفاخرة والرياضية.
+</p>
 
-        onInit={(typewriter) => {
-            typewriter
-              .typeString(
-               "Brothers Protaction هي واحدة من الشركات الرائدة في مجال أفلام الحماية والعناية المتكاملة بالسيارات داخل مصر. تأسست الشركة بهدف تقديم مستوى احترافي عالمي يجمع بين الجودة العالية، التكنولوجيا الحديثة، والخبرة الكبيرة في حماية السيارات الفاخرة والرياضية."
-              )
-              .start();
-          }}
-          options={{
-            cursor: "|",
-            delay: 20,
-          }}
-        />
-      )}
-    </div>
-             <div ref={ref} className="text-white/70 leading-9 text-lg"
- >
-      {inView && (
-        <Typewriter
+<p className="text-white/70 leading-9 text-lg">
+  نستخدم أحدث التقنيات والخامات العالمية في تركيب أفلام الحماية PPF،
+  العزل الحراري، النانو سيراميك، والتلميع الاحترافي، لضمان الحفاظ على
+  سيارتك بأفضل شكل ممكن لأطول فترة.
+</p>
 
-        onInit={(typewriter) => {
-            typewriter
-              .typeString(
-               " نستخدم أحدث التقنيات والخامات العالمية في تركيب أفلام الحماية PPF، العزل الحراري، النانو سيراميك، والتلميع الاحترافي، لضمان الحفاظ على سيارتك بأفضل شكل ممكن لأطول فترة."
-              )
-              .start();
-          }}
-          options={{
-            cursor: "|",
-            delay: 20,
-          }}
-        />
-      )}
-    </div>
-             <div ref={ref} className="text-white/70 leading-9 text-lg"
- >
-      {inView && (
-        <Typewriter
-
-        onInit={(typewriter) => {
-            typewriter
-              .typeString(
-               " فريق Brothers Protaction مدرب على أعلى مستوى لتقديم تجربة احترافية بداية من الاستشارة وحتى تسليم السيارة، مع اهتمام دقيق بأصغر التفاصيل وحرص كامل على رضا العميل وجودة التنفيذ."
-              )
-              .start();
-          }}
-          options={{
-            cursor: "|",
-            delay: 20,
-          }}
-        />
-      )}
-    </div>
-
+<p className="text-white/70 leading-9 text-lg">
+  فريق Brothers Protaction مدرب على أعلى مستوى لتقديم تجربة احترافية
+  بداية من الاستشارة وحتى تسليم السيارة، مع اهتمام دقيق بأصغر التفاصيل
+  وحرص كامل على رضا العميل وجودة التنفيذ.
+</p>
         
             </motion.div>
 
@@ -226,8 +186,8 @@ export default function Page() {
                 }}
                 className="absolute bg-[#111111] border border-white/10 backdrop-blur"
                 style={{
-                  bottom: "1px",
-                  right: "90px",
+                  bottom: "-30px",
+                  right: "70px",
                   padding: "20px 24px",
                   borderRadius: "24px",
                 }}
