@@ -32,7 +32,7 @@ export default function AboutSection() {
     <section
       id="about"
       dir="rtl"
-      className="bg-[#0d0d0e] text-white"
+      className="bg-white text-black"
       style={{
         padding: "80px 20px",
       }}
@@ -75,10 +75,12 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-right"
           style={{
-            fontSize: "14px",
+            fontSize: "16px",
             lineHeight: "1.9",
-            color: "rgba(255,255,255,0.6)",
+            color: "rgba(0,0,0,0.6)",
             flex: 1,
+            fontWeight: "600",
+            
           }}
         >
          <div ref={ref}>
@@ -122,7 +124,7 @@ export default function AboutSection() {
           }}
         >
           <img
-            src="\img\623250-بوجاتى-تشيرون.webp"
+            src="\img\WhatsApp Image 2026-06-02 at 6.08.57 PM (1).jpeg"
             alt="سيارة "
             className="w-full object-cover"
           />
@@ -197,11 +199,11 @@ export default function AboutSection() {
             viewport={{ once: true }}
             whileHover={{
               y: -10,
-              backgroundColor: "#131313",
+              backgroundColor: "rgba(0,0,0,0.05)",
             }}
             style={{
               position: "relative",
-              background: "#0d0d0e",
+              background: "white",
               padding: "40px",
               flex: 1,
               borderLeft:
@@ -258,7 +260,7 @@ export default function AboutSection() {
               style={{
                 fontSize: "14px",
                 lineHeight: "1.9",
-                color: "rgba(255,255,255,0.55)",
+                color: "rgba(0,0,0,0.55)",
               }}
             >
               {r.body}

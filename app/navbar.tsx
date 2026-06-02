@@ -34,7 +34,7 @@ export default function Navbar() {
       <header
         className="sticky top-0 z-50 border-b"
         style={{
-          background: "rgba(10,10,10,0.75)",
+          background: "rgba(120,10,10,0.50)",
           backdropFilter: "blur(14px)",
           borderColor: "rgba(255,255,255,0.08)",
         }}
@@ -309,6 +309,7 @@ export default function Navbar() {
             paddingTop: "25px",
           }}
         >
+          <Link href="/#Booking" >
           <button
             onClick={() => scrollTo("contact")}
             className="w-full font-black transition-all duration-300 hover:brightness-110"
@@ -319,10 +320,11 @@ export default function Navbar() {
               color: "var(--color-text)",
               fontSize: "15px",
             }}
+
           >
             احجز موعدك الآن
           </button>
-
+</Link>
           <p
             className="text-center text-white/35"
             style={{

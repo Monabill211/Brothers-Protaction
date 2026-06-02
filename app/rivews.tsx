@@ -57,7 +57,7 @@ export default function ReviewsSection() {
   return (
     <section
       dir="rtl"
-      className="bg-[#0a0a0a] text-white overflow-hidden"
+      className="bg-white text-black overflow-hidden"
       style={{
         padding: "120px 20px",
       }}
@@ -156,12 +156,12 @@ export default function ReviewsSection() {
               </div>
 
               {/* Review */}
-              <p className="review-text">{item.review}</p>
+              <p className="review-text text-[#3d3131]">{item.review}</p>
 
               {/* User */}
               <div className="user-box">
                 <div>
-                  <h3 className="user-name">{item.name}</h3>
+                  <h3 className="user-name text-black">{item.name}</h3>
 
                   <div className="car-box">
                     <DirectionsCarFilledIcon
@@ -210,7 +210,7 @@ export default function ReviewsSection() {
         }
 
         .review-text {
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(10, 0, 0, 0.7);
           line-height: 2;
           font-size: 15px;
           margin-bottom: 35px;
@@ -223,7 +223,7 @@ export default function ReviewsSection() {
         }
 
         .user-name {
-          color: #fff;
+          color: #000 ;
           font-size: 20px;
           font-weight: 900;
           margin-bottom: 6px;

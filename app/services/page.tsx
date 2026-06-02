@@ -11,7 +11,7 @@ const services = [
     title: "أفلام الحماية PPF",
     body:
       "حماية كاملة لطلاء السيارة ضد الخدوش والعوامل الخارجية باستخدام خامات عالمية عالية الجودة.",
-    image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM (1).jpeg",
     section: "/aflam-ppf",
   },
 
@@ -19,7 +19,7 @@ const services = [
     title: "العزل الحراري",
     body:
       "تقليل حرارة الشمس داخل السيارة مع الحفاظ على الرؤية والشكل الفخم للسيارة.",
-    image: "/img/623250-بوجاتى-تشيرون.webp",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM (2).jpeg",
     section: "/thermal-insulation",
   },
 
@@ -27,7 +27,7 @@ const services = [
     title: "النانو سيراميك",
     body:
       "طبقة حماية ولمعان قوية تحافظ على الطلاء وتعطي السيارة مظهرًا احترافيًا دائمًا.",
-    image: "/img/452863198_122094958910449527_15294905101800547_n.png",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM.jpeg",
     section: "/nano-ceramic",
 
   },
@@ -36,7 +36,7 @@ const services = [
     title: "تلميع السيارات",
     body:
       "إزالة الخدوش والعيوب البسيطة واستعادة لمعان السيارة بأحدث تقنيات التلميع.",
-    image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.58 PM.jpeg",
     section: "/tliming",
 
   },
@@ -49,7 +49,7 @@ export default function page() {
     <section
       id="services"
       dir="rtl"
-      className="relative bg-[#0a0a0a] text-white overflow-hidden"
+      className="relative bg-white  text-black overflow-hidden"
       style={{
         padding: "120px 20px",
       }}
@@ -94,7 +94,7 @@ export default function page() {
           خدمات <span className="text-primary">BROTHERS PROTACTION</span>
         </h2>
 
-        <p className="text-white/60 max-w-3xl mx-auto leading-8 text-sm md:text-base">
+        <p className="text-black/60 text-center max-w-3xl mx-auto leading-8 text-sm md:text-base" style={{margin:"auto"}}>
           نقدم مجموعة متكاملة من خدمات حماية وعناية السيارات باستخدام أحدث
           التقنيات العالمية لضمان أفضل حماية ومظهر احترافي لسيارتك.
         </p>
@@ -123,7 +123,7 @@ export default function page() {
               duration: 0.8,
             }}
             viewport={{ once: true }}
-            className="group relative bg-[#101010] border border-white/10 rounded-[32px] overflow-hidden hover:border-primary/40 transition-all duration-500 hover:-translate-y-4"
+            className="group relative bg-white border border-white/10 rounded-[32px] overflow-hidden hover:border-primary/40 transition-all duration-500 hover:-translate-y-4"
           >
             {/* Image */}
             <div className="relative overflow-hidden">
@@ -133,7 +133,7 @@ export default function page() {
                 className="w-full h-[240px] object-cover transition-all duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent" /> */}
             </div>
 
             {/* Content */}
@@ -164,7 +164,7 @@ export default function page() {
               </h3>
 
               {/* Text */}
-              <p className="text-white/60 leading-8 text-sm">
+              <p className="text-black/60 leading-8 text-sm">
                 {item.body}
               </p>
 

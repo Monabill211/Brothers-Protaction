@@ -7,37 +7,57 @@ const projects = [
   {
     car: "BMW M4 Competition",
     service: "أفلام حماية PPF كاملة",
-    image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    video: "/img/vides/VID-20260602-WA0054.mp4",
   },
 
   {
     car: "Mercedes C200",
     service: "عزل حراري + نانو سيراميك",
-    image: "/img/623250-بوجاتى-تشيرون.webp",
+    video: "/img/vides/VID-20260602-WA0055.mp4",
   },
 
   {
     car: "Audi RS5",
     service: "تلميع احترافي + حماية",
-    image: "/img/download.jpg",
+    video: "/img/vides/VID-20260602-WA0118.mp4",
   },
 
   {
     car: "Porsche 911",
     service: "أفلام حماية أمامية",
-    image: "/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg",
+    video: "/img/vides/VID-20260602-WA0119.mp4",
   },
 
   {
     car: "Range Rover Sport",
     service: "نانو سيراميك كامل",
-    image: "/img/623250-بوجاتى-تشيرون.webp",
+    video: "/img/vides/VID-20260602-WA0068.mp4",
   },
 
   {
     car: "Toyota Supra",
     service: "عزل حراري أمريكي",
-    image: "/img/download.jpg",
+    video: "/img/vides/VID-20260602-WA0120.mp4",
+  },
+  {
+    car: "Toyota Supra",
+    service: "عزل حراري أمريكي",
+    video: "/img/vides/VID-20260602-WA0122.mp4",
+  },
+  {
+    car: "Toyota Supra",
+    service: "عزل حراري أمريكي",
+    video: "/img/vides/VID-20260602-WA0144.mp4",
+  },
+  {
+    car: "Toyota Supra",
+    service: "عزل حراري أمريكي",
+    video: "/img/vides/VID-20260602-WA0148.mp4",
+  },
+  {
+    car: "Toyota Supra",
+    service: "عزل حراري أمريكي",
+    video: "/img/vides/VID-20260602-WA0149.mp4",
   },
 ];
 
@@ -49,7 +69,7 @@ export default function page() {
     <section
       id="portfolio"
       dir="rtl"
-      className="relative bg-[#080808] text-white overflow-hidden"
+      className="relative bg-white text-black overflow-hidden"
       style={{
         padding: "120px 20px",
       }}
@@ -127,11 +147,14 @@ export default function page() {
           >
             {/* Image */}
             <div className="relative overflow-hidden">
-              <img
-                src={item.image}
-                alt={item.car}
-                className="w-full h-[340px] object-cover transition-all duration-700 group-hover:scale-110"
-              />
+              <video
+  src={item.video}
+  className="w-full h-[340px] object-cover transition-all duration-700 group-hover:scale-110"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/20 to-transparent" />
@@ -162,7 +185,7 @@ export default function page() {
               </div>
 
               {/* Car */}
-              <h3 className="text-3xl font-black">
+              <h3 className="text-3xl font-black text-white">
                 {item.car}
               </h3>
             </div>

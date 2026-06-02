@@ -20,7 +20,7 @@ export default function Page() {
       >
         {/* Background */}
         <img
-          src="/img/372f563cb2330eb70d3a01aca0a3ebfe.jpg"
+          src="\img\WhatsApp Image 2026-06-02 at 6.38.54 PM.jpeg"
           alt="background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -52,36 +52,41 @@ export default function Page() {
 
           {/* Main Title */}
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 80,
-              filter: "blur(10px)",
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              filter: "blur(0px)",
-            }}
-            transition={{
-              duration: 1,
-            }}
-            className="text-center"
-            style={{
-              marginBottom: "70px",
-            }}
-          >
-            <h1 className="text-5xl md:text-7xl font-black text-primary-dark">
-              <Typewriter
-                options={{
-                  strings: ["BROTHERS PROTACTION"],
-                  autoStart: true,
-                  loop: true,
-                  delay: 70,
-                  cursor: "|",
-                }}
-              />
-            </h1>
-          </motion.div>
+          initial={{
+            opacity: 0,
+            y: 80,
+            filter: "blur(10px)",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1,
+          }}
+        >
+          <h1 className="text-5xl md:text-7xl font-black text-primary-dark text-center " style={{marginBottom:"100px"}}>
+            <Typewriter
+  onInit={(typewriter) => {
+    typewriter
+      .typeString(
+        '<span style="color:#df3939">B</span><span style="color:white">ROTHERS PROTACTION</span>'
+      )
+      .pauseFor(2000)
+      .deleteAll()
+      .start();
+  }}
+  options={{
+    autoStart: true,
+    loop: true,
+    delay: 70,
+    cursor: "|",
+  }}
+/>
+          </h1>
+        </motion.div>
+
 
           {/* Content Grid */}
           <div
@@ -200,11 +205,14 @@ export default function Page() {
                   borderRadius: "30px",
                 }}
               >
-                <img
-                  src="/img/623250-بوجاتى-تشيرون.webp"
-                  alt="Brothers Protaction"
-                  className="w-full h-full object-cover hover:scale-110 transition duration-700"
-                />
+               <video
+  src="\img\vides\VID-20260602-WA0151.mp4"
+  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
               </div>
 
               {/* Floating Card */}
@@ -237,7 +245,7 @@ export default function Page() {
       {/* WHY CHOOSE US */}
 <section
   dir="rtl"
-  className="relative bg-[#080808] text-white overflow-hidden"
+  className="relative bg-white text-black overflow-hidden"
   style={{
     padding: "120px 20px",
   }}
@@ -337,7 +345,7 @@ export default function Page() {
           duration: 0.8,
         }}
         viewport={{ once: true }}
-        className="group relative bg-[#101010] border border-white/10 rounded-[32px] overflow-hidden hover:border-primary/40 transition-all duration-500 hover:-translate-y-4"
+        className="group relative bg-white border border-white/10 rounded-[32px] overflow-hidden hover:border-primary/40 transition-all duration-500 hover:-translate-y-4"
         style={{
           padding: "40px 30px",
         }}
@@ -371,7 +379,7 @@ export default function Page() {
         </h3>
 
         {/* Text */}
-        <p className="text-white/60 leading-8 text-sm relative z-10">
+        <p className="text-black/60 leading-8 text-sm relative z-10">
           {item.body}
         </p>
       </motion.div>
@@ -400,7 +408,7 @@ export default function Page() {
         duration: 1,
       }}
       viewport={{ once: true }}
-      className="bg-[#101010] border border-white/10 rounded-[30px] hover:border-primary/40 transition-all duration-500"
+      className="bg-white border border-white/10 rounded-[30px] hover:border-primary/40 transition-all duration-500"
       style={{
         padding: "45px",
       }}
@@ -423,7 +431,7 @@ export default function Page() {
         رؤيتنا
       </h3>
 
-      <p className="text-white/60 leading-9 text-sm md:text-base" style={{margin:"auto"}} >
+      <p className="text-black/60 leading-9 text-sm md:text-base" style={{margin:"auto"}} >
         نسعى لأن نكون الوجهة الأولى في الشرق الأوسط في مجال أفلام الحماية
         والعناية الفائقة بالسيارات من خلال تقديم خدمات عالمية وتجربة استثنائية
         لكل عميل.
@@ -444,7 +452,7 @@ export default function Page() {
         duration: 1,
       }}
       viewport={{ once: true }}
-      className="bg-[#101010] border border-white/10 rounded-[30px] hover:border-primary/40 transition-all duration-500"
+      className="bg-white border border-white/10 rounded-[30px] hover:border-primary/40 transition-all duration-500"
       style={{
         padding: "45px",
       }}
@@ -467,7 +475,7 @@ export default function Page() {
         مهمتنا
       </h3>
 
-      <p className="text-white/60 leading-9 text-sm md:text-base">
+      <p className="text-black/60 leading-9 text-sm md:text-base">
         تقديم أعلى جودة ممكنة في خدمات حماية وعناية السيارات باستخدام أحدث
         التقنيات العالمية وفريق احترافي يضمن الحفاظ على جمال وقيمة السيارة
         لأطول فترة ممكنة.
