@@ -49,7 +49,7 @@ export default function page() {
     <section
       id="services"
       dir="rtl"
-      className="relative bg-white  text-black overflow-hidden"
+      className="w- relative bg-white  text-black overflow-hidden"
       style={{
         padding: "120px 20px",
       }}
