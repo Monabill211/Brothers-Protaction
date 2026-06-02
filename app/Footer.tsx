@@ -222,7 +222,7 @@ BROTHERS PROTACTION
           </h3>
 
           <a
-            href="#"
+            href="https://www.google.com/maps/search/Codill%20East%20Mall/@30.030609130859375,31.505521774291992,17z?hl=en"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -237,10 +237,11 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-              التجمع الخامس، القاهرة، مصر
+        التجمع الخامس - التسعين الشمالي - مول اللوتس ٣
           </a>
           <a
-            href="#"
+            href="https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en"
+
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -255,10 +256,9 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-              الشيخ زايد، الجيزة، مصر
-          </a>
+الشيخ زايد - محور جمال عبد الناصر - ممشي Square One          </a>
           <a
-            href="#"
+            href="https://maps.app.goo.gl/Ph5ucUxPeMuBY3UV8?g_st=ic"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -274,11 +274,10 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-              المهندسين، القاهرة، مصر
-          </a>
+المهندسين - ٦ خان يونس متفرع من شارع شهاب          </a>
 
           <a
-            href="tel:+201021219588"
+            href="tel:+201149005778"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -293,7 +292,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-            01021219588
+            01149005778
           </a>
 
           <a
@@ -316,7 +315,7 @@ BROTHERS PROTACTION
           </a>
 
           <a
-            href="https://wa.me/201021219588"
+            href="https://wa.me/201149005778"
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{
               display: "flex",
@@ -333,7 +332,7 @@ BROTHERS PROTACTION
                 background: "rgba(200,0,0,0.12)",
               }}
             />
-             01021219588
+             01149005778
           </a>
 
           <div

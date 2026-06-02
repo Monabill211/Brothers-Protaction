@@ -38,7 +38,7 @@ export default function Booking() {
       `📍 *الفرع:* ${formData.branch}%0A` +
       `📝 *ملاحظات:* ${formData.notes || "لا يوجد"}`;
 
-    window.open(`https://wa.me/201021219588?text=${msg}`, "_blank");
+    window.open(`https://wa.me/201149005778?text=${msg}`, "_blank");
 
     setFormData({ name: "", phone: "", car: "", service: "", date: "", branch: "", notes: "" });
   };
@@ -52,6 +52,7 @@ export default function Booking() {
       id="Booking"
       dir="rtl"
       style={{
+         margin:"auto",
         padding: "100px 16px",
         background: "#fff",
       }}
@@ -227,12 +228,14 @@ export default function Booking() {
 
           {/* Contact Cards */}
           {[
-            { title: "رقم الهاتف", value: "01021219588", icon: <CallIcon />, link: "tel:+201021219588" },
-            { title: "واتساب", value: "01021219588", icon: <WhatsAppIcon />, link: "https://wa.me/201021219588" },
+            { title: "رقم الهاتف", value: "01149005778", icon: <CallIcon />, link: "tel:+201149005778" },
+            { title: "واتساب", value: "01149005778", icon: <WhatsAppIcon />, link: "https://wa.me/201149005778" },
             { title: "البريد الإلكتروني", value: "info@brothersprotection.com", icon: <AttachEmailIcon />, link: "mailto:info@brothersprotection.com" },
-            { title: "فرع الشيخ زايد", value: "السادس من أكتوبر، محافظة الجيزة، مصر", icon: <AddLocationAltIcon />, link: "#" },
-            { title: "فرع المهندسين", value: "٦ خان يونس متفرع من شارع شهاب، الجيزة", icon: <AddLocationAltIcon />, link: "#" },
-            { title: "فرع التجمع الخامس", value: "التجمع الخامس، القاهرة الجديدة، مصر", icon: <AddLocationAltIcon />, link: "#" },
+            { title: "فرع الشيخ زايد", value: "الشيخ زايد - محور جمال عبد الناصر - ممشي Square One", icon: <AddLocationAltIcon />, link: "https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en" },
+            { title: "فرع المهندسين", value: "٦ خان يونس متفرع من شارع شهاب، الجيزة", icon: <AddLocationAltIcon />, link: "https://www.google.com/maps?q=Brothers+Protection%D8%8C+%D9%A6+%D8%AE%D8%A7%D9%86+%D9%8A%D9%88%D9%86%D8%B3+%D9%85%D8%AA%D9%81%D8%B1%D8%B9+%D9%85%D9%86+%D8%B4%D8%A7%D8%B1%D8%B9%D8%8C+%D8%B4%D9%87%D8%A7%D8%A8&ftid=0x14584100284a500f:0x72ec79e9e0de3082&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100799877,94286869&g_ep=CAISEjI2LjIxLjEuOTE3Mzg1NDY3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwNzk5ODc3LDk0Mjg2ODY5QgJFRw%3D%3D&skid=ffba94ec-0d91-440f-b1b4-e1cffb194a33&g_st=ic" },
+            { title: "فرع التجمع الخامس",
+               value: "التجمع الخامس - التسعين الشمالي - مول اللوتس ٣",
+                icon: <AddLocationAltIcon />, link: "https://www.google.com/maps/search/Codill%20East%20Mall/@30.030609130859375,31.505521774291992,17z?hl=en" },
           ].map((item, i) => (
             <motion.a
               key={i}

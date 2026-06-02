@@ -111,7 +111,7 @@ export default function HeroPage() {
         >
           {[
             { label: "عميل راضٍ", value: 1000 },
-            { label: "سنوات خبرة", value: 10 },
+            { label: "سنوات خبرة", value: 7 },
             { label: "تقييم العملاء", value: 4.7, decimal: true },
           ].map((s, i) => (
             <motion.div

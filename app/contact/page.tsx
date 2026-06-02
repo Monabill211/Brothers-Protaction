@@ -18,23 +18,23 @@ export default function page() {
   {
     country: "مصر",
     city: "القاهرة",
-    address: "   المهندسين، القاهرة، مصر",
+    address: "المهندسين - ٦ خان يونس متفرع من شارع شهاب",
     map:
-      "https://www.google.com/maps?q=30.0275,31.4913&z=15&output=embed",
+      "https://maps.app.goo.gl/Ph5ucUxPeMuBY3UV8?g_st=ic",
   },
   {
     country: "مصر",
     city: "القاهرة",
-    address: "التجمع الخامس، القاهرة، مصر",
+    address: "التجمع الخامس - التسعين الشمالي - مول اللوتس ٣",
     map:
-      "https://www.google.com/maps?q=31.0409,31.3785&z=15&output=embed",
+      "https://www.google.com/maps/search/Codill%20East%20Mall/@30.030609130859375,31.505521774291992,17z?hl=en",
   },
   {
     country: "مصر",
     city: "الشيخ زايد",
-    address: "الشيخ زايد، الجيزة، مصر",
+    address: "الشيخ زايد - محور جمال عبد الناصر - ممشي Square One",
     map:
-      "https://www.google.com/maps?q=30.0128,30.9723&z=15&output=embed",
+      "https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en",
   },
 ];
   const [formData, setFormData] = useState({
@@ -52,7 +52,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  e.preventDefaul
 ${formData.message}
 `;
 
-  const whatsappUrl = `https://wa.me/201021219588?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/201149005778?text=${encodeURIComponent(
     text
   )}`;
 
@@ -328,15 +328,15 @@ ${formData.message}
           {[
             {
               title: "رقم الهاتف",
-              value: "01021219588",
+              value: "201149005778",
               icon: <CallIcon />,
-              link: "tel:+201021219588",
+              link: "tel:+201149005778",
             },
             {
               title: "واتساب",
-              value: "01021219588",
+              value: "201149005778",
               icon: <WhatsAppIcon />,
-              link: "https://wa.me/201021219588",
+              link: "https://wa.me/201149005778",
             },
             {
               title: "البريد الإلكتروني",
@@ -487,7 +487,7 @@ flexWrap: "wrap",
                 {item.address}
               </p>
 
-              <a href="tel:+201021219588">
+              <a href="tel:+201149005778 ">
                 <button
                 className="w-36 h-12 bg-primary-light hover:bg-primary-dark rounded-3xl cursor-pointer text-white font-bold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
                 

@@ -51,41 +51,24 @@ export default function Page() {
           </motion.p>
 
           {/* Main Title */}
-          <motion.div
-          initial={{
-            opacity: 0,
-            y: 80,
-            filter: "blur(10px)",
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-          }}
-          transition={{
-            duration: 1,
-          }}
-        >
-          <h1 className="text-5xl md:text-7xl font-black text-primary-dark text-center " style={{marginBottom:"100px"}}>
-            <Typewriter
-  onInit={(typewriter) => {
-    typewriter
-      .typeString(
-        '<span style="color:#df3939">B</span><span style="color:white">ROTHERS PROTACTION</span>'
-      )
-      .pauseFor(2000)
-      .deleteAll()
-      .start();
-  }}
-  options={{
-    autoStart: true,
-    loop: true,
-    delay: 70,
-    cursor: "|",
-  }}
-/>
-          </h1>
-        </motion.div>
+         <motion.img
+                    src="/img/WhatsApp Image 2026-06-02 at 8.20.47 PM.png"
+                    alt="Brothers Protection"
+                    className="bg-cover "
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                    whileHover={{ scale: 1.04 }}
+                    style={{
+                      width: "100%",
+                      height: "220px",
+                      objectPosition: "center top",
+                      borderRadius: "32px",
+                      position: "relative",
+                      zIndex: 1,
+                      boxShadow: "0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1)",
+                    }}
+                  />
+                
 
 
           {/* Content Grid */}
@@ -142,6 +125,79 @@ export default function Page() {
 </p>
         
             </motion.div>
+            <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="mt-8 bg-white/5 border border-white/10 backdrop-blur-md"
+  style={{
+    borderRadius: "24px",
+    padding: "24px",
+  }}
+>
+  <div className="flex flex-wrap gap-6 items-center justify-between">
+    <div>
+      <h3
+        className="font-black text-2xl text-primary"
+        style={{ marginBottom: "10px" }}
+      >
+        BROTHERS PROTACTION FILM
+      </h3>
+
+      <p className="text-white/70 leading-8">
+        نقوم بتطوير وتركيب أفلام حماية تحمل هوية Brothers Protaction
+        بمعايير عالمية وخامات عالية الجودة لتوفير أقصى درجات الحماية
+        والمظهر الفاخر لسيارتك.
+      </p>
+            <div className="grid grid-cols-2 gap-4">
+
+        <div className="bg-white/5 p-4 rounded-xl">
+          <h4 className="text-primary font-black text-2xl">320</h4>
+          <p className="text-white/70 text-sm">Microns</p>
+        </div>
+
+        <div className="bg-white/5 p-4 rounded-xl">
+          <h4 className="text-primary font-black text-2xl">8 mil</h4>
+          <p className="text-white/70 text-sm">Thickness</p>
+        </div>
+
+        <div className="bg-white/5 p-4 rounded-xl">
+          <h4 className="text-primary font-black text-2xl">100%</h4>
+          <p className="text-white/70 text-sm">Gloss & Shine</p>
+        </div>
+
+        <div className="bg-white/5 p-4 rounded-xl">
+          <h4 className="text-primary font-black text-2xl">100%</h4>
+          <p className="text-white/70 text-sm">Self Healing</p>
+        </div>
+
+        <div className="bg-white/5 p-4 rounded-xl col-span-2">
+          <h4 className="text-primary font-black text-2xl">100%</h4>
+          <p className="text-white/70 text-sm">
+            Resistance To Environmental Factors
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div
+      className="bg-primary text-white text-center"
+      style={{
+        minWidth: "170px",
+        padding: "20px",
+        borderRadius: "20px",
+        margin:"auto"
+      }}
+    >
+      <h4 className="text-5xl font-black">10</h4>
+      <p className="font-bold mt-2">
+        سنوات ضمان
+      </p>
+    </div>
+  </div>
+</motion.div>
 
             {/* Left Image */}
             <motion.div
@@ -163,6 +219,7 @@ export default function Page() {
                 className="overflow-hidden border border-white/10"
                 style={{
                   borderRadius: "30px",
+                  margin:"auto"
                 }}
               >
                <video
@@ -172,6 +229,9 @@ export default function Page() {
   muted
   loop
   playsInline
+  style={{
+    
+  }}
 />
               </div>
 
@@ -192,7 +252,7 @@ export default function Page() {
                   borderRadius: "24px",
                 }}
               >
-                <h3 className="text-4xl font-black text-primary">+10</h3>
+                <h3 className="text-4xl font-black text-primary">+7</h3>
 
                 <p className="text-white/60 text-sm">
                   سنوات خبرة في حماية السيارات

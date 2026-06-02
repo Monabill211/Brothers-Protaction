@@ -83,23 +83,66 @@ export default function AboutSection() {
             
           }}
         >
-         <div ref={ref}>
-      {inView && (
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                "برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة في صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا بتقديم حلول مبتكرة ومتطورة في مجالات أفلام الحماية والعزل الحراري وتقنيات النانو والعناية الفائقة بالسيارات."
-              )
-              .start();
-          }}
-          options={{
-            cursor: "",
-            delay: 20,
-          }}
-        />
-      )}
+         <p className="text-black/70 leading-9 text-lg">
+  برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة في
+  صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا بتقديم حلول
+  مبتكرة ومتطورة في مجالات أفلام الحماية والعزل الحراري وتقنيات النانو
+  والعناية الفائقة بالسيارات.
+</p>
+    <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="mt-8 bg-white/5 border border-white/10 backdrop-blur-md"
+  style={{
+    borderRadius: "24px",
+    padding: "24px",
+  }}
+>
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    
+    <div className="flex-1">
+      <span className="text-primary font-bold tracking-[3px] text-xs">
+        EXCLUSIVE PROTECTION FILM
+      </span>
+
+      <h3
+        className="font-black text-2xl"
+        style={{ marginTop: "10px", marginBottom: "12px" }}
+      >
+        أفلام حماية تحمل هوية Brothers Protaction
+      </h3>
+
+      <p className="text-black/70 leading-8">
+        نقدم أفلام حماية عالية الجودة تحمل معايير Brothers Protaction
+        لتوفير أقصى درجات الحماية ضد الخدوش والعوامل الخارجية مع الحفاظ
+        على المظهر الأصلي والفاخر للسيارة.
+      </p>
+    
     </div>
+
+    <div
+      className="bg-primary text-white text-center"
+      style={{
+        minWidth: "180px",
+        padding: "24px",
+        borderRadius: "20px",
+      }}
+    >
+      <h4 className="text-5xl font-black">10</h4>
+      <p
+        style={{
+          marginTop: "8px",
+          fontWeight: "700",
+        }}
+      >
+        سنوات ضمان
+      </p>
+    </div>
+
+  </div>
+</motion.div>
         </motion.div>
         <motion.div
           initial={{
@@ -124,7 +167,7 @@ export default function AboutSection() {
           }}
         >
           <img
-            src="/img/WhatsApp Image 2026-06-02 at 6.08.57 PM (1).jpeg"
+            src="/img/WhatsApp Image 2026-06-02 at 6.09.35 PM.jpeg"
             alt="سيارة "
             className="w-full object-cover"
           />
