@@ -50,13 +50,13 @@ export default function HeroPage() {
           <motion.img
             src="/img/WhatsApp Image 2026-06-02 at 8.20.47 PM.png"
             alt="Brothers Protection"
+            className="bg-cover "
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             whileHover={{ scale: 1.04 }}
             style={{
               width: "100%",
               height: "220px",
-              objectFit: "cover",
               objectPosition: "center top",
               borderRadius: "32px",
               position: "relative",
