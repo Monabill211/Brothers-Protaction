@@ -9,8 +9,12 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 import Navbar from '../navbar'
 import Footer from '../Footer'
+import { useState } from "react";
+
+
 export default function page() {
-    const branches = [
+
+ const branches = [
   {
     country: "مصر",
     city: "القاهرة",
@@ -33,6 +37,28 @@ export default function page() {
       "https://www.google.com/maps?q=30.0128,30.9723&z=15&output=embed",
   },
 ];
+  const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  message: "",
+}); 
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const text = `
+الاسم: ${formData.name}
+رقم الهاتف: ${formData.phone}
+
+الرسالة:
+${formData.message}
+`;
+
+  const whatsappUrl = `https://wa.me/201021219588?text=${encodeURIComponent(
+    text
+  )}`;
+
+  window.open(whatsappUrl, "_blank");
+};
   return (
     <>
       <Navbar />
@@ -138,13 +164,14 @@ export default function page() {
              تواصل معانا
           </h2>
 
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "22px",
-            }}
-          >
+         <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "22px",
+  }}
+>
             {/* Row 1 */}
             <div
               className="grid grid-cols-1 md:grid-cols-2"
@@ -163,15 +190,19 @@ export default function page() {
                 </label>
 
                 <input
-                  type="text"
-                  placeholder="اكتب اسمك هنا..."
+  type="text"
+  value={formData.name}
+  onChange={(e) =>
+    setFormData({ ...formData, name: e.target.value })
+  }
+  placeholder="اكتب اسمك هنا..."
                   className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
                     borderRadius: "18px",
                   }}
-                />
+/>
               </div>
 
               <div>
@@ -184,16 +215,20 @@ export default function page() {
                   رقم الهاتف
                 </label>
 
-                <input
-                  type="tel"
-                  placeholder="اكتب رقم هاتفك..."
+               <input
+  type="tel"
+  value={formData.phone}
+  onChange={(e) =>
+    setFormData({ ...formData, phone: e.target.value })
+  }
+  placeholder="اكتب رقم هاتفك..."
                   className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                   style={{
                     height: "56px",
                     padding: "0 20px",
                     borderRadius: "18px",
                   }}
-                />
+/>
               </div>
             </div>
 
@@ -209,30 +244,30 @@ export default function page() {
                  رسالتك
               </label>
 
-              <textarea
-                rows={5}
+             <textarea
+  rows={5}
                 placeholder="اكتب  تفاصيل رسالتك..."
                 className="w-full resize-none border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
                 style={{
                   borderRadius: "24px",
                   padding: "20px",
                 }}
-              />
+/>
             </div>
 
             {/* Button */}
-            <button
-              type="submit"
-              className="w-full bg-primary text-white font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
-              style={{
-                height: "60px",
-                borderRadius: "999px",
-                marginTop: "10px",
-              }}
-            >
-              ارسال الآن
-              <SendIcon />
-            </button>
+          <button
+  type="submit"
+  className="w-full bg-primary text-white font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
+  style={{
+    height: "60px",
+    borderRadius: "999px",
+    marginTop: "10px",
+  }}
+>
+  ارسال الآن
+  <SendIcon />
+</button>
           </form>
         </motion.div>
 
@@ -270,7 +305,8 @@ export default function page() {
           >
             <img
               src="\img\452863198_122094958910449527_15294905101800547_n.png"
-              alt="carprogeny logo"
+              alt=" Brothers Protaction
+  logo"
               className="w-12 mb-4"
             />
 
@@ -299,15 +335,15 @@ export default function page() {
             },
             {
               title: "واتساب",
-              value: "تواصل مباشر",
+              value: "01021219588",
               icon: <WhatsAppIcon />,
               link: "https://wa.me/201021219588",
             },
             {
               title: "البريد الإلكتروني",
-              value: "info@carprogeny.com",
+              value: "info@Brothers Protaction.com",
               icon: <AttachEmailIcon />,
-              link: "mailto:info@carprogeny.com",
+              link: "mailto:info@Brothers Protaction.com",
             },
             
           ].map((item, i) => (

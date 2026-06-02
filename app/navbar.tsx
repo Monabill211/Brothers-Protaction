@@ -67,19 +67,21 @@ export default function Navbar() {
                 background: "rgba(255,255,255,0.03)",
               }}
             >
-        <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt="carprogeny logo" className="w-full" />
+        <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protaction
+  logo" className="w-full" />
             </div>
 
             <div>
-              <h1
-                className="font-black text-primary"
+              <h2
+                className="font-black "
                 style={{
                   fontSize: "18px",
                   marginBottom: "3px",
                 }}
               >
-                BROTHERS PROTACTION
-              </h1>
+                <span style={{ color: "#df3939" }}>B</span>
+                <span style={{ color: "white" }}>ROTHERS PROTACTION</span>
+              </h2>
 
               <p
                 className="text-white/50"
@@ -238,18 +240,20 @@ export default function Navbar() {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-                <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt="carprogeny logo" className="w-full" />
+                <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protaction
+  logo" className="w-full" />
 
             </div>
 
             <div>
               <h2
-                className="font-black text-primary"
+                className="font-black "
                 style={{
                   fontSize: "17px",
                 }}
               >
-                BROTHERS PROTACTION
+                <span style={{ color: "#df3939" }}>B</span>
+                <span style={{ color: "white" }}>ROTHERS PROTACTION</span>  
               </h2>
 
               <p

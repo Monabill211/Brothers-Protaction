@@ -7,8 +7,61 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import SendIcon from "@mui/icons-material/Send";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
+import { useState } from "react";
+
 
 export default function Booking() {
+  const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  car: "",
+  service: "",
+  date: "",
+  branch: "",
+  notes: "",
+});
+
+
+
+  const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const oldBookings = JSON.parse(
+    localStorage.getItem("bookings") || "[]"
+  );
+
+  const newBooking = {
+    id: Date.now(),
+    ...formData,
+    status: "pending",
+  };
+
+  localStorage.setItem(
+    "bookings",
+    JSON.stringify([...oldBookings, newBooking])
+  );
+
+  alert("تم إرسال الحجز بنجاح");
+
+  setFormData({
+    name: "",
+    phone: "",
+    car: "",
+    service: "",
+    date: "",
+    branch: "",
+    notes: "",
+  });
+};
   return (
     <motion.section
         initial={{
@@ -113,13 +166,14 @@ export default function Booking() {
             احجز خدمتك
           </h2>
 
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "22px",
-            }}
-          >
+         <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "22px",
+  }}
+>
             {/* Row 1 */}
             <div
               className="grid grid-cols-1 md:grid-cols-2"
@@ -137,16 +191,19 @@ export default function Booking() {
                   الاسم بالكامل
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="اكتب اسمك هنا..."
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                />
+               <input
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  placeholder="اكتب اسمك هنا..."
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+/>
               </div>
 
               <div>
@@ -160,15 +217,18 @@ export default function Booking() {
                 </label>
 
                 <input
-                  type="tel"
-                  placeholder="اكتب رقم هاتفك..."
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                />
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  placeholder="اكتب رقم هاتفك..."
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+/>
               </div>
             </div>
 
@@ -189,16 +249,19 @@ export default function Booking() {
                   نوع السيارة
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="BMW M4"
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                />
+               <input
+  type="text"
+  name="car"
+  value={formData.car}
+  onChange={handleChange}
+  placeholder="BMW M4"
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+/>
               </div>
 
               <div>
@@ -212,19 +275,22 @@ export default function Booking() {
                 </label>
 
                 <select
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                >
-                  <option>اختر الخدمة</option>
-                  <option>أفلام حماية PPF</option>
-                  <option>عزل حراري</option>
-                  <option>نانو سيراميك</option>
-                  <option>تلميع سيارات</option>
-                </select>
+  name="service"
+  value={formData.service}
+  onChange={handleChange}
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-primary"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+>
+  <option value="">اختر الخدمة</option>
+  <option>أفلام حماية PPF</option>
+  <option>عزل حراري</option>
+  <option>نانو سيراميك</option>
+  <option>تلميع سيارات</option>
+</select>
               </div>
             </div>
 
@@ -245,15 +311,18 @@ export default function Booking() {
                   اليوم المناسب
                 </label>
 
-                <input
-                  type="date"
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                />
+               <input
+  type="date"
+  name="date"
+  value={formData.date}
+  onChange={handleChange}
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+/>
               </div>
 
               <div>
@@ -263,23 +332,25 @@ export default function Booking() {
                     marginBottom: "10px",
                   }}
                 >
-                  الوقت المناسب
+        الفرع           المناسب 
                 </label>
 
-                <select
-                  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                  style={{
-                    height: "56px",
-                    padding: "0 20px",
-                    borderRadius: "18px",
-                  }}
-                >
-                  <option>اختر الوقت</option>
-                  <option>12:00 PM</option>
-                  <option>02:00 PM</option>
-                  <option>04:00 PM</option>
-                  <option>06:00 PM</option>
-                </select>
+               <select
+  name="branch"
+  value={formData.branch}
+  onChange={handleChange}
+  className="w-full border border-white/10 bg-[#0d0d0d] text-white focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    height: "56px",
+    padding: "0 20px",
+    borderRadius: "18px",
+  }}
+>
+  <option value="">اختر الفرع المناسب</option>
+  <option>الشيخ زايد</option>
+  <option>المهندسين</option>
+  <option>التجمع الخامس</option>
+</select>
               </div>
             </div>
 
@@ -293,28 +364,30 @@ export default function Booking() {
               >
                 ملاحظات إضافية
               </label>
-
-              <textarea
-                rows={5}
-                placeholder="اكتب أي تفاصيل إضافية..."
-                className="w-full resize-none border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
-                style={{
-                  borderRadius: "24px",
-                  padding: "20px",
-                }}
-              />
+<textarea
+  rows={5}
+  name="notes"
+  value={formData.notes}
+  onChange={handleChange}
+  placeholder="اكتب أي تفاصيل إضافية..."
+  className="w-full resize-none border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-[#c84b4b]"
+  style={{
+    borderRadius: "24px",
+    padding: "20px",
+  }}
+/>
             </div>
 
             {/* Button */}
-            <button
-              type="submit"
-              className="w-full bg-primary text-white font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
-              style={{
-                height: "60px",
-                borderRadius: "999px",
-                marginTop: "10px",
-              }}
-            >
+           <button
+  type="submit"
+  className="w-full bg-primary text-white font-black transition-all duration-300 hover:brightness-110 hover:-translate-y-2 flex items-center justify-center gap-3"
+  style={{
+    height: "60px",
+    borderRadius: "999px",
+    marginTop: "10px",
+  }}
+>
               احجز الآن
               <SendIcon />
             </button>
@@ -355,7 +428,8 @@ export default function Booking() {
           >
             <img
               src="\img\452863198_122094958910449527_15294905101800547_n.png"
-              alt="carprogeny logo"
+              alt=" Brothers Protaction
+  logo"
               className="w-12 mb-4"
             />
 
@@ -384,19 +458,31 @@ export default function Booking() {
             },
             {
               title: "واتساب",
-              value: "تواصل مباشر",
+              value: "01021219588",
               icon: <WhatsAppIcon />,
               link: "https://wa.me/201021219588",
             },
             {
               title: "البريد الإلكتروني",
-              value: "info@carprogeny.com",
+              value: "info@Brothers Protaction.com",
               icon: <AttachEmailIcon />,
-              link: "mailto:info@carprogeny.com",
+              link: "mailto:info@Brothers Protaction.com",
             },
             {
               title: "العنوان",
-              value: "جمهورية مصر العربية",
+              value: "   ‏‏السادس من أكتوبر‏، ‏محافظة الجيزة‏، ‏مصر‏ · ‏القاهرة‏، ‏محافظة القاهرة‏، ‏مصر‏ · ‏الجيزة‏، ‏محافظة الجيزة‏، ‏مصر‏‏",
+              icon: <AddLocationAltIcon />,
+              link: "#",
+            },
+            {
+              title: "العنوان",
+              value: "٦ خان يونس متفرع من شارع، شهاب, Giza, Egypt ",
+              icon: <AddLocationAltIcon />,
+              link: "#",
+            },
+            {
+              title: "العنوان",
+              value: "التجمع الخامس، القاهرة الجديدة، مصر",
               icon: <AddLocationAltIcon />,
               link: "#",
             },

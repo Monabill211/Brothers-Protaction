@@ -6,7 +6,7 @@ const bookings = [
     car: "BMW M4",
     service: "أفلام حماية PPF",
     date: "2026-06-01",
-    time: "12:00 PM",
+    time: "الشيخ زايد",
     notes: "حماية كاملة للواجهة الأمامية",
   },
 
@@ -14,7 +14,7 @@ const bookings = [
     car: "Mercedes C200",
     service: "نانو سيراميك",
     date: "2026-06-02",
-    time: "03:00 PM",
+    time: "الشيخ زايد",
     notes: "تلميع قبل تركيب النانو",
   },
 
@@ -22,7 +22,7 @@ const bookings = [
     car: "Audi RS5",
     service: "عزل حراري",
     date: "2026-06-03",
-    time: "05:00 PM",
+    time: "المهندسين",
     notes: "عزل زجاج كامل",
   },
 
@@ -30,7 +30,7 @@ const bookings = [
     car: "Toyota Corolla",
     service: "تلميع سيارات",
     date: "2026-06-04",
-    time: "01:00 PM",
+    time: "التجمع الخامس",
     notes: "إزالة خدوش بسيطة",
   },
 ];
@@ -72,7 +72,7 @@ export default function Page() {
                 <th className="py-5">نوع السيارة</th>
                 <th>الخدمة</th>
                 <th>التاريخ</th>
-                <th>الوقت</th>
+                <th>الرف</th>
                 <th>الملاحظات</th>
               </tr>
             </thead>

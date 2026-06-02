@@ -48,14 +48,22 @@ export default function HeroPage() {
         >
           <h1 className="text-5xl md:text-7xl font-black text-primary-dark">
             <Typewriter
-              options={{
-                strings: ["BROTHERS PROTACTION"],
-                autoStart: true,
-                loop: true,
-                delay: 70,
-                cursor: "|",
-              }}
-            />
+  onInit={(typewriter) => {
+    typewriter
+      .typeString(
+        '<span style="color:#df3939">B</span><span style="color:white">ROTHERS PROTACTION</span>'
+      )
+      .pauseFor(2000)
+      .deleteAll()
+      .start();
+  }}
+  options={{
+    autoStart: true,
+    loop: true,
+    delay: 70,
+    cursor: "|",
+  }}
+/>
           </h1>
         </motion.div>
 

@@ -65,7 +65,8 @@ export default function Footer() {
               alignItems: "center",
               gap: "10px",
             }}>
-              <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt="carprogeny logo" className="w-12" />
+              <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protaction
+  logo" className="w-12" />
       
 
             <h2
