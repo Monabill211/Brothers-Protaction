@@ -124,7 +124,7 @@ export default function AboutSection() {
           }}
         >
           <img
-            src="\img\WhatsApp Image 2026-06-02 at 6.08.57 PM (1).jpeg"
+            src="/img/WhatsApp Image 2026-06-02 at 6.08.57 PM (1).jpeg"
             alt="سيارة "
             className="w-full object-cover"
           />

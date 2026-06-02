@@ -17,11 +17,11 @@ export default function HeroPage() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
-      <img
-        src="\img\WhatsApp Image 2026-06-02 at 6.08.58 PM.jpeg"
-        alt="background"
-        className="absolute inset-0 w-lvw h-lvh object-cover"
-      />
+    <img
+  src="/img/WhatsApp Image 2026-06-02 at 6.08.58 PM.jpeg"
+  alt="background"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60" />
@@ -37,14 +37,18 @@ export default function HeroPage() {
           style={{ position: "relative", display: "inline-block" }}
         >
           {/* Glow */}
-          <div style={{
-            position: "absolute",
-            inset: "-24px",
-            borderRadius: "44px",
-            background: "radial-gradient(ellipse at center, rgba(220,38,38,0.4) 0%, transparent 70%)",
-            filter: "blur(28px)",
-            zIndex: 0,
-          }} />
+         <div
+  style={{
+    position: "absolute",
+    top: "-10px",
+    right: "-10px",
+    left: "-10px",
+    bottom: "-10px",
+    borderRadius: "44px",
+    filter: "blur(20px)",
+    overflow: "hidden",
+  }}
+/>
 
           {/* Image — floating up/down only */}
           <motion.img

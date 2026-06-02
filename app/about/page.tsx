@@ -226,8 +226,8 @@ export default function Page() {
                 }}
                 className="absolute bg-[#111111] border border-white/10 backdrop-blur"
                 style={{
-                  bottom: "30px",
-                  right: "30px",
+                  bottom: "1px",
+                  right: "90px",
                   padding: "20px 24px",
                   borderRadius: "24px",
                 }}
