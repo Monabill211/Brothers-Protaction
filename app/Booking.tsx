@@ -38,7 +38,7 @@ export default function Booking() {
       `📍 *الفرع:* ${formData.branch}%0A` +
       `📝 *ملاحظات:* ${formData.notes || "لا يوجد"}`;
 
-    window.open(`https://wa.me/201149005778?text=${msg}`, "_blank");
+    window.open(`https://wa.me/201003397852?text=${msg}`, "_blank");
 
     setFormData({ name: "", phone: "", car: "", service: "", date: "", branch: "", notes: "" });
   };
