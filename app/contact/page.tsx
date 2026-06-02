@@ -42,8 +42,7 @@ export default function page() {
   phone: "",
   message: "",
 }); 
-const handleSubmit = (e) => {
-  e.preventDefault();
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {  e.preventDefault();
 
   const text = `
 الاسم: ${formData.name}
