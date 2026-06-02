@@ -328,13 +328,13 @@ ${formData.message}
           {[
             {
               title: "رقم الهاتف",
-              value: "0100 3397852",
+              value: "01003397852",
               icon: <CallIcon />,
               link: "tel:+201003397852",
             },
             {
               title: "واتساب",
-              value: "0100 3397852",
+              value: "01003397852",
               icon: <WhatsAppIcon />,
               link: "https://wa.me/201003397852",
             },
