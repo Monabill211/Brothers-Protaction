@@ -240,7 +240,7 @@ BROTHERS PROTACTION
         التجمع الخامس - التسعين الشمالي - مول اللوتس ٣
           </a>
           <a
-            href="https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en"
+            href="https://maps.app.goo.gl/YtUA9sgrZxYNLtd98?g_st=ic"
 
             className= "text-[#918585] font-medium hover:text-primary  transition-all duration-300 hover:-translate-x-2 ease-in-out"
             style={{

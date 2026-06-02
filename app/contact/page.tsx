@@ -34,7 +34,7 @@ export default function page() {
     city: "الشيخ زايد",
     address: "الشيخ زايد - محور جمال عبد الناصر - ممشي Square One",
     map:
-      "https://www.google.com/maps?q=29.99244499206543,30.94668960571289&z=17&hl=en",
+      "https://maps.app.goo.gl/YtUA9sgrZxYNLtd98?g_st=ic",
   },
 ];
   const [formData, setFormData] = useState({
