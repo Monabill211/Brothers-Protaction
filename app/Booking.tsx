@@ -148,7 +148,7 @@ export default function Booking() {
                   <option>أفلام حماية PPF</option>
                   <option>عزل حراري</option>
                   <option>نانو سيراميك</option>
-                  <option>تلميع سيارات</option>
+                  <option>فلم حماية برازر بروتراكشن</option>
                 </select>
               </Field>
             </div>

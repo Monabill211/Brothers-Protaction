@@ -22,7 +22,7 @@ const reviews = [
 
   {
     name: "محمد خالد",
-    car: "Mercedes C200",
+    car: "Mercedes GLC 300 ",
     review:
       "العزل الحراري ممتاز والخامات أصلية جدًا والتعامل راقي من أول الحجز للتسليم.",
     rating: 5,
@@ -30,7 +30,7 @@ const reviews = [
 
   {
     name: "عمر أشرف",
-    car: "Audi RS7",
+    car: "Lamborghini Urus ",
     review:
       "أفضل مكان جربته في حماية السيارات، اهتمام بالتفاصيل بشكل رهيب.",
     rating: 5,
@@ -38,7 +38,7 @@ const reviews = [
 
   {
     name: "كريم طارق",
-    car: "Porsche 911",
+    car: "Lotus Emira",
     review:
       "الشغل نضيف جدًا والخدمة فوق الممتازة وفعلًا العربية بقت مختلفة.",
     rating: 5,
@@ -46,7 +46,7 @@ const reviews = [
 
   {
     name: "يوسف محمد",
-    car: "Range Rover",
+    car: "Toyota Land Cruiser ",
     review:
       "النانو سيراميك ممتاز ولمعة العربية فضلت ثابتة بشكل محترم جدًا.",
     rating: 5,

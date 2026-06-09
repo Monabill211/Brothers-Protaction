@@ -27,17 +27,17 @@ const services = [
     title: "النانو سيراميك",
     body:
       "طبقة حماية ولمعان قوية تحافظ على الطلاء وتعطي السيارة مظهرًا احترافيًا دائمًا.",
-    image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM.jpeg",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.58 PM.jpeg",
     section: "/nano-ceramic",
 
   },
 
-  {
-    title: "تلميع السيارات",
+    {
+    title: "فلم حماية برازر بروتراكشن",
     body:
-      "إزالة الخدوش والعيوب البسيطة واستعادة لمعان السيارة بأحدث تقنيات التلميع.",
-    image: "/img/WhatsApp Image 2026-06-02 at 6.09.58 PM.jpeg",
-    section: "/tliming",
+      "حماية كاملة لطلاء السيارة ضد الخدوش والعوامل الخارجية باستخدام خامات عالمية عالية الجودة.",
+    image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM.jpeg",
+    section: "/brathers-film",
 
   },
 ];

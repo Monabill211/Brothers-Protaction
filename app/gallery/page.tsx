@@ -5,58 +5,52 @@ import Navbar from "../navbar";
 import Footer from "../Footer";
 const projects = [
   {
-    car: "BMW M4 Competition",
+    car: "Mercedes GLC 300",
     service: "أفلام حماية PPF كاملة",
     video: "/img/vides/VID-20260602-WA0054.mp4",
   },
 
   {
-    car: "Mercedes C200",
-    service: "عزل حراري + نانو سيراميك",
-    video: "/img/vides/VID-20260602-WA0055.mp4",
-  },
-
-  {
-    car: "Audi RS5",
+    car: "Avatr 12 ",
     service: "تلميع احترافي + حماية",
     video: "/img/vides/VID-20260602-WA0118.mp4",
   },
 
   {
-    car: "Porsche 911",
-    service: "أفلام حماية أمامية",
+    car: "Lamborghini Urus",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0119.mp4",
   },
 
   {
-    car: "Range Rover Sport",
-    service: "نانو سيراميك كامل",
+    car: "Kia Carens",
+    service: "حماية Brothers Protaction",
     video: "/img/vides/VID-20260602-WA0068.mp4",
   },
 
   {
-    car: "Toyota Supra",
-    service: "عزل حراري أمريكي",
+    car: "Lotus Emira",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0120.mp4",
   },
   {
-    car: "Toyota Supra",
-    service: "عزل حراري أمريكي",
+    car: "BMW M4  ",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0122.mp4",
   },
   {
-    car: "Toyota Supra",
-    service: "عزل حراري أمريكي",
+    car: "Toyota Land Cruiser",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0144.mp4",
   },
   {
-    car: "Toyota Supra",
-    service: "عزل حراري أمريكي",
+    car: "Jeep Grand Cherokee ",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0148.mp4",
   },
   {
-    car: "Toyota Supra",
-    service: "عزل حراري أمريكي",
+    car: "Mercedes GLC 200 ",
+    service: "حماية شاملة PPF",
     video: "/img/vides/VID-20260602-WA0149.mp4",
   },
 ];
