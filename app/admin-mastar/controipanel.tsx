@@ -10,9 +10,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const links = [
   { title: "الرئيسية", href: "/admin-mastar/mainpage", icon: <DashboardIcon /> },
-  { title: "الفرع الأول", href: "/admin-mastar/far31", icon: <StorefrontIcon /> },
-  // { title: "الفرع الثاني", href: "/admin-mastar/far32", icon: <StorefrontIcon /> },
-  // { title: "الفرع الثالث", href: "/admin-mastar/far33", icon: <StorefrontIcon /> },
+  { title: "اضافة السيارات", href: "/admin-mastar/far31", icon: <StorefrontIcon /> },
   { title: "الإعدادات", href: "/admin-mastar/settings", icon: <SettingsIcon /> },
 ];
 

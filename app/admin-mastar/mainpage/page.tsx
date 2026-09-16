@@ -17,8 +17,8 @@ const SALESMEN = ["أحمد محمد", "محمود علي", "كريم سامي"]
 const links = [
   { href: "/admin-mastar/upcoming-cars", label: "تفاصيل الزيارات القادمة" },
   { href: "/admin-mastar/revenue", label: "تفاصيل الإيرادات" },
-  { href: "/admin-mastar/workingCars", label: "تفاصيل الزيارات" },
-  { href: "/admin-mastar/deliveredCars", label: "تفاصيل السيارات" },
+  { href: "/admin-mastar/workingCars", label: "تفاصيل السيارات جارية" },
+  { href: "/admin-mastar/deliveredCars", label: "تفاصيل السيارات المُسلَّمة" },
 ];
 
 type Car = {
@@ -32,6 +32,28 @@ type Car = {
   salesman: string;
   created_at: string;
 };
+
+// بداية الفترة حسب الفلتر المختار
+function getStartDate(period: string): Date {
+  const now = new Date();
+  const start = new Date(now);
+
+  switch (period) {
+    case "اليوم":
+      start.setHours(0, 0, 0, 0);
+      break;
+    case "أسبوع":
+      start.setDate(now.getDate() - 7);
+      break;
+    case "شهر":
+      start.setMonth(now.getMonth() - 1);
+      break;
+    case "سنة":
+      start.setFullYear(now.getFullYear() - 1);
+      break;
+  }
+  return start;
+}
 
 export default function Page() {
   const [activePeriod, setActivePeriod] = useState("اليوم");
@@ -49,9 +71,13 @@ export default function Page() {
     if (!error && data) setCars(data);
   }
 
-  // Stats per salesman
+  // فلترة السيارات حسب الفترة المختارة
+  const startDate = getStartDate(activePeriod);
+  const periodCars = cars.filter((c) => new Date(c.created_at) >= startDate);
+
+  // Stats per salesman — بناءً على الفترة
   const salesmanStats = SALESMEN.map((name) => {
-    const filtered = cars.filter((c) => c.salesman === name);
+    const filtered = periodCars.filter((c) => c.salesman === name);
     return {
       name,
       revenue: filtered.reduce((a, c) => a + (c.paid ?? 0), 0),
@@ -62,13 +88,13 @@ export default function Page() {
 
   // Total row
   const totals = {
-    revenue: cars.reduce((a, c) => a + (c.paid ?? 0), 0),
-    visits: cars.length,
-    worked: cars.length,
+    revenue: periodCars.reduce((a, c) => a + (c.paid ?? 0), 0),
+    visits: periodCars.length,
+    worked: periodCars.length,
   };
 
-  // Last worked cars
-  const lastCars = cars.slice(0, 4);
+  // Last worked cars — بنفس الفترة
+  const lastCars = periodCars.slice(0, 4);
 
   const allColumns = [...SALESMEN, "الإجمالي"];
 
@@ -103,6 +129,11 @@ export default function Page() {
               </button>
             ))}
           </div>
+
+          {/* Period label */}
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", marginBottom: "20px", marginTop: "-20px" }}>
+            عرض بيانات: <strong style={{ color: "#DC2626" }}>{activePeriod}</strong> — {periodCars.length} سيارة
+          </p>
 
           {/* Salesman Header Cards */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(180px,1fr))", gap: "16px", marginBottom: "8px" }}>
@@ -175,10 +206,10 @@ export default function Page() {
             {/* Last Worked Cars */}
             <div className="border border-primary" style={{ borderRadius: "16px", padding: "20px", display: "flex", flexDirection: "column", gap: "14px" }}>
               <p style={{ color: "#fff", textAlign: "center", fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>
-                آخر عربيات تم العمل عليها
+                آخر عربيات تم العمل عليها ({activePeriod})
               </p>
               {lastCars.length === 0 ? (
-                <p style={{ color: "rgba(255,255,255,0.4)", textAlign: "center", fontSize: "0.9rem" }}>لا توجد سيارات</p>
+                <p style={{ color: "rgba(255,255,255,0.4)", textAlign: "center", fontSize: "0.9rem" }}>لا توجد سيارات في هذه الفترة</p>
               ) : (
                 lastCars.map((car) => (
                   <div

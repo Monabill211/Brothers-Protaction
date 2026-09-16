@@ -23,6 +23,7 @@ type Car = {
 export default function Page() {
   const [cars, setCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
+  const [updatingId, setUpdatingId] = useState<string | null>(null);
 
   useEffect(() => {
     getCars();
@@ -38,6 +39,28 @@ export default function Page() {
 
     if (!error && data) setCars(data);
     setLoading(false);
+  }
+
+  async function markAsDelivered(car: Car) {
+    setUpdatingId(car.id);
+
+    const { error } = await supabase
+      .from("cars")
+      .update({
+        status: "تم التسليم",
+        paid: car.total_price,   // كل المبلغ بقى مدفوع
+        remaining: 0,            // المتبقي بقى صفر
+      })
+      .eq("id", car.id);
+
+    setUpdatingId(null);
+
+    if (error) {
+      alert("حصل خطأ: " + error.message);
+    } else {
+      // اشيل السيارة من القايمة فورًا لأنها بقت "تم التسليم"
+      setCars((prev) => prev.filter((c) => c.id !== car.id));
+    }
   }
 
   const totalPaid = cars.reduce((acc, item) => acc + (item.paid ?? 0), 0);
@@ -106,9 +129,28 @@ export default function Page() {
                   {car.notes && <p><span className="font-bold text-primary">ملاحظات: </span>{car.notes}</p>}
                 </div>
 
-                {/* Status */}
-                <div style={{ marginTop: "16px" }}>
+                {/* Status + Button */}
+                <div style={{ marginTop: "16px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px" }}>
                   <span className="bg-yellow-500 px-4 py-2 rounded-full text-sm font-bold">جاري العمل</span>
+
+                  <button
+                    onClick={() => markAsDelivered(car)}
+                    disabled={updatingId === car.id}
+                    style={{
+                      flex: 1,
+                      padding: "10px",
+                      borderRadius: "12px",
+                      border: "none",
+                      cursor: updatingId === car.id ? "not-allowed" : "pointer",
+                      fontWeight: 700,
+                      fontSize: "0.85rem",
+                      color: "#fff",
+                      background: updatingId === car.id ? "rgba(34,197,94,0.4)" : "#22c55e",
+                      transition: "background 0.2s",
+                    }}
+                  >
+                    {updatingId === car.id ? "جاري التحديث..." : "✓ تم التسليم"}
+                  </button>
                 </div>
               </div>
             ))}

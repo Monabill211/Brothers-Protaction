@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: "خدماتنا", id: "services" },
     { label: " أعمالنا", id: "gallery" },
     { label: " تواصل معانا", id: "contact" },
+    { label: "عملائنا", id: "Warrantysection " },
   ];
 
   return (

@@ -4,11 +4,12 @@ import React, { useEffect, useState } from "react";
 import DashboardHeader from "../hedaer";
 import Sidebar from "../controipanel";
 import { supabase } from "../../lib/supabase";
-
+import Link from "next/link";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import AssessmentIcon from "@mui/icons-material/Assessment";
+import { Libertinus_Keyboard } from "next/font/google";
 
 const SALESMEN = ["أحمد محمد", "محمود علي", "كريم سامي"];
 
@@ -136,6 +137,16 @@ export default function Page() {
                 </div>
               ))
             )}
+            <Link href="/admin-mastar/workingCars" className="flex items-center justify-center">
+             <button
+              className="bg-primary text-white font-bold rounded-2xl hover:opacity-90 transition-all duration-300"
+              style={{ padding: "12px", marginTop: "10px" }}
+            >
+عرض السيارت التي جاري العمل عليها 
+            </button>
+            </Link>
+          </div>
+         
           </div>
 
           {/* Last worked cars */}
@@ -161,7 +172,7 @@ export default function Page() {
         </div>
 
         {/* Add Car Form */}
-        <div className="border border-primary rounded-[10px]" style={{ padding: "25px" }}>
+        <div className="border border-primary rounded-[10px]" style={{ padding: "25px",margin:"auto" }}>
           <h2 className="text-2xl font-black text-center text-white" style={{ marginBottom: "25px" }}>
             إضافة سيارة
           </h2>
@@ -278,7 +289,7 @@ export default function Page() {
           </form>
         </div>
 
-      </div>
+      
 
       <style>{`
         @media (max-width: 768px) {

@@ -30,20 +30,12 @@ export default function SettingsPage() {
       placeholder: "ادخل الباسورد الجديد",
     },
     {
-      title: "باسورد الفرع الأول",
+      title: "باسورد اضافة السيارات",
       name: "branch1",
-      placeholder: "ادخل الباسورد الجديد",
-    },
-    {
-      title: "باسورد الفرع الثاني",
-      name: "branch2",
-      placeholder: "ادخل الباسورد الجديد",
-    },
-    {
-      title: "باسورد الفرع الثالث",
-      name: "branch3",
-      placeholder: "ادخل الباسورد الجديد",
-    },
+      placeholder: "ادخل الباسورد الجديد", 
+
+    }
+  
   ];
 
   return (
@@ -51,13 +43,8 @@ export default function SettingsPage() {
       <DashboardHeader />
       <Sidebar />
 
-      <section
-        dir="rtl"
-        className="min-h-screen bg-[#0a0a0a] text-white lg:mr-[300px]"
-        style={{
-          padding: "20px",
-        }}
-      >
+     
+
         {/* Header */}
         <div
           className="flex flex-col md:flex-row md:items-center md:justify-between"
@@ -95,7 +82,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Settings Cards */}
-        <div className="space-y-6">
+        <div className="space-y-6" style={{margin:"auto"}}>
           {settingsCards.map((item, index) => (
             <div
               key={index}
@@ -170,7 +157,7 @@ export default function SettingsPage() {
             </div>
           ))}
         </div>
-      </section>
+      
     </>
   );
 }
