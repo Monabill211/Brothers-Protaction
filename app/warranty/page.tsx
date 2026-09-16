@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/app/lib/supabase";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import ShieldIcon from "@mui/icons-material/Shield";
 import PersonIcon from "@mui/icons-material/Person";
@@ -55,49 +54,49 @@ export default function WarrantyPage() {
 
   const [warranty, setWarranty] = useState<Warranty | null>(null);
 
-  async function handleRegister() {
-    setError("");
-    if (!name.trim() || !phone.trim() || !car.trim()) {
-      setError("من فضلك ادخل كل البيانات");
-      return;
-    }
-    setLoading(true);
-    const { error: err } = await supabase.from("warranties").insert({
-      name: name.trim(),
-      phone: phone.trim(),
-      car: car.trim(),
-      production_date: today,
-      installed_at: today,
-      warranty_start: today,
-      warranty_end: warrantyEndStr,
-    });
-    setLoading(false);
-    if (err) { setError("حصل خطأ، حاول تاني"); return; }
-    setShowPopup(true);
-  }
+//   async function handleRegister() {
+//     setError("");
+//     if (!name.trim() || !phone.trim() || !car.trim()) {
+//       setError("من فضلك ادخل كل البيانات");
+//       return;
+//     }
+//     setLoading(true);
+//     const { error: err } = await supabase.from("warranties").insert({
+//       name: name.trim(),
+//       phone: phone.trim(),
+//       car: car.trim(),
+//       production_date: today,
+//       installed_at: today,
+//       warranty_start: today,
+//       warranty_end: warrantyEndStr,
+//     });
+//     setLoading(false);
+//     if (err) { setError("حصل خطأ، حاول تاني"); return; }
+//     setShowPopup(true);
+//   }
 
-  async function handleLogin() {
-    setError("");
-    if (!loginName.trim() || !loginPhone.trim()) {
-      setError("ادخل الاسم ورقم التليفون");
-      return;
-    }
-    setLoading(true);
-    const { data, error: err } = await supabase
-      .from("warranties")
-      .select("*")
-      .eq("name", loginName.trim())
-      .eq("phone", loginPhone.trim())
-      .single();
-    setLoading(false);
-    if (err || !data) { setError("البيانات مش موجودة، تأكد من الاسم والرقم"); return; }
-    setWarranty(data);
-    setView("mywarranty");
-  }
+//   async function handleLogin() {
+//     setError("");
+//     if (!loginName.trim() || !loginPhone.trim()) {
+//       setError("ادخل الاسم ورقم التليفون");
+//       return;
+//     }
+//     setLoading(true);
+//     const { data, error: err } = await supabase
+//       .from("warranties")
+//       .select("*")
+//       .eq("name", loginName.trim())
+//       .eq("phone", loginPhone.trim())
+//       .single();
+//     setLoading(false);
+//     if (err || !data) { setError("البيانات مش موجودة، تأكد من الاسم والرقم"); return; }
+//     setWarranty(data);
+//     setView("mywarranty");
+//   }
 
-  const daysLeft = warranty
-    ? Math.max(0, Math.ceil((new Date(warranty.warranty_end).getTime() - Date.now()) / 86400000))
-    : 0;
+//   const daysLeft = warranty
+//     ? Math.max(0, Math.ceil((new Date(warranty.warranty_end).getTime() - Date.now()) / 86400000))
+//     : 0;
 
   return (
     <>
