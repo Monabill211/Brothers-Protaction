@@ -5,20 +5,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import ShieldIcon from "@mui/icons-material/Shield";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import { supabase } from "@/app/lib/supabase";
 import Navbar from "../navbar";
 import Footer from "../Footer";
 
 type View = "btn" | "form" | "result";
 
 type Warranty = {
+  id: string;
   name: string;
+  phone: string;
   car: string;
   production_date: string;
   installed_at: string;
   warranty_start: string;
   warranty_end: string;
 };
+
+
 
 export default function WarrantySection() {
   const [flipped, setFlipped] = useState(false);
@@ -53,20 +56,36 @@ export default function WarrantySection() {
     setError("");
   }
 
-  async function handleLookup() {
+  function handleLookup() {
     setError("");
-    if (!name.trim() || !phone.trim()) { setError("ادخل الاسم ورقم التليفون"); return; }
+
+    if (!name.trim() || !phone.trim()) {
+      setError("ادخل الاسم ورقم التليفون");
+      return;
+    }
+
     setLoading(true);
-    const { data, error: err } = await supabase
-      .from("warranties")
-      .select("*")
-      .eq("name", name.trim())
-      .eq("phone", phone.trim())
-      .single();
-    setLoading(false);
-    if (err || !data) { setError("البيانات مش موجودة، تأكد من الاسم والرقم"); return; }
-    setWarranty(data);
-    setView("result");
+
+    // UI only — no database connection
+    setTimeout(() => {
+      setLoading(false);
+
+      const demoWarranty: Warranty = {
+        id: "demo",
+        name: name.trim(),
+        phone: phone.trim(),
+        car: "BMW 2022",
+        production_date: new Date().toISOString(),
+        installed_at: new Date().toISOString(),
+        warranty_start: new Date().toISOString(),
+        warranty_end: new Date(
+          Date.now() + 12 * 365 * 24 * 60 * 60 * 1000
+        ).toISOString(),
+      };
+
+      setWarranty(demoWarranty);
+      setView("result");
+    }, 500);
   }
 
   const rows = warranty ? [
