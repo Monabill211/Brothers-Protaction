@@ -205,7 +205,7 @@ export default function Page() {
 
             {/* Last Worked Cars */}
             <div className="border border-primary" style={{ borderRadius: "16px", padding: "20px", display: "flex", flexDirection: "column", gap: "14px" }}>
-              <p style={{ color: "#fff", textAlign: "center", fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>
+              <p style={{ color: "#fff", textAlign: "center", fontWeight: 900, fontSize: "1.2rem", margin: 0 0 }}>
                 آخر عربيات تم العمل عليها ({activePeriod})
               </p>
               {lastCars.length === 0 ? (
