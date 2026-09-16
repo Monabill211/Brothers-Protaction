@@ -154,9 +154,9 @@ export default function WarrantyPage() {
 
             {error && <p style={{ color: "#ef4444", fontSize: "13px", margin: "4px 0 8px" }}>{error}</p>}
 
-            <Btn primary onClick={handleRegister}>
-              {loading ? "جاري التسجيل..." : "تسجيل الضمان"}
-            </Btn>
+            <button>
+             تسجيل الضمان
+            </button>
 عرض الضمان
             <Link href="/warrantysection"> 
 
@@ -184,10 +184,10 @@ export default function WarrantyPage() {
             <Field icon={<PhoneIcon style={{ fontSize: "18px" }} />} placeholder="رقم التليفون" value={loginPhone} onChange={setLoginPhone} type="tel" />
 
             {error && <p style={{ color: "#ef4444", fontSize: "13px", margin: "4px 0 8px" }}>{error}</p>}
-
-            <Btn primary onClick={handleLogin}>
-              {loading ? "جاري البحث..." : "عرض الضمان"}
-            </Btn>
+s
+            <button >
+              عرض الضمان
+            </button>
 
             <button
               onClick={() => { setView("register"); setError(""); }}
@@ -206,15 +206,7 @@ export default function WarrantyPage() {
               <h2 style={{ color: "#fff", fontSize: "20px", fontWeight: 900, margin: "0 0 8px" }}>
                 بيانات الضمان
               </h2>
-              <span style={{
-                display: "inline-block",
-                background: daysLeft > 365 ? "rgba(34,197,94,0.15)" : "rgba(239,68,68,0.15)",
-                color: daysLeft > 365 ? "#22c55e" : "#ef4444",
-                border: `1px solid ${daysLeft > 365 ? "rgba(34,197,94,0.3)" : "rgba(239,68,68,0.3)"}`,
-                borderRadius: "20px", padding: "4px 16px", fontSize: "12px", fontWeight: 700,
-              }}>
-                {daysLeft > 0 ? `متبقي ${daysLeft.toLocaleString("ar-EG")} يوم` : "انتهى الضمان"}
-              </span>
+             
             </div>
 
             <div style={{ background: "rgba(220,38,38,0.07)", border: "1px solid rgba(220,38,38,0.2)", borderRadius: "16px", padding: "20px" }}>
