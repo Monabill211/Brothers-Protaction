@@ -8,7 +8,7 @@ import { section } from "framer-motion/client";
 
 const services = [
   {
-    title: "أفلام الحماية PPF",
+    title: "أفلام حماية / Protecion film",
     body:
       "حماية كاملة لطلاء السيارة ضد الخدوش والعوامل الخارجية باستخدام خامات عالمية عالية الجودة.",
     image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM (1).jpeg",
@@ -16,7 +16,7 @@ const services = [
   },
 
   {
-    title: "العزل الحراري",
+    title: "عازل الحراري /  thermal insulation",
     body:
       "تقليل حرارة الشمس داخل السيارة مع الحفاظ على الرؤية والشكل الفخم للسيارة.",
     image: "/img/WhatsApp Image 2026-06-02 at 6.09.57 PM (2).jpeg",
@@ -24,7 +24,7 @@ const services = [
   },
 
   {
-    title: "النانو سيراميك",
+    title: "تغير لون السيارة /  Wrapping",
     body:
       "طبقة حماية ولمعان قوية تحافظ على الطلاء وتعطي السيارة مظهرًا احترافيًا دائمًا.",
     image: "/img/WhatsApp Image 2026-06-02 at 6.09.58 PM.jpeg",
@@ -91,7 +91,7 @@ export default function page() {
             marginBottom: "20px",
           }}
         >
-          خدمات <span className="text-primary">BROTHERS PROTACTION</span>
+          خدمات <span className="text-primary">BROTHERS Protection</span>
         </h2>
 
         <p className="text-black/60 text-center max-w-3xl mx-auto leading-8 text-sm md:text-base" style={{margin:"auto"}}>

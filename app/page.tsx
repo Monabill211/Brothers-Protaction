@@ -3,6 +3,7 @@ import HeroPage from "./HeroPage";
 import About from "./about";
 import Reviews from "./rivews";
 import Booking from "./Booking";
+import ClientSection from "./clintrivews";
 
 import Footer from "./Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Booking />
         <Reviews />
+        <ClientSection />
       </main>
       <Footer />
     </>

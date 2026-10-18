@@ -85,7 +85,7 @@ export default function Footer() {
               className="w-12"
             />
             <h2 className="text-primary text-3xl font-extrabold">
-              BROTHERS PROTACTION
+              BROTHERS Protection
             </h2>
           </div>
 
@@ -97,7 +97,7 @@ export default function Footer() {
               maxWidth: "420px",
             }}
           >
-            نقدم حلول احترافية متطورة في أفلام الحماية PPF والعزل الحراري
+            نقدم حلول احترافية متطورة في أفلام حماية / Protecion film وعازل الحراري /  thermal insulation
             وتقنيات النانو لحماية السيارات بأعلى جودة عالمية وعلى يد فريق
             متخصص بخبرة كبيرة في مجال العناية الفائقة بالسيارات.
           </p>
@@ -143,11 +143,11 @@ export default function Footer() {
           </h3>
 
           {[
-            "أفلام الحماية PPF",
-            "العزل الحراري",
-            "النانو سيراميك",
-            "تلميع السيارات",
-            "حماية داخلية",
+            "أفلام حماية / Protecion film",
+            "عازل الحراري /  thermal insulation",
+            "تغير لون السيارة /  Wrapping",
+            "فاميه حاجب الرؤية/  tinted windows",
+            "",
           ].map((item) => (
             <span
               key={item}
@@ -226,9 +226,9 @@ export default function Footer() {
               label: "01003397852",
             },
             {
-              href: "mailto:info@BROTHERSPROTACTION.com",
+              href: "mailto:info@BROTHERSProtection.com",
               icon: AttachEmailIcon,
-              label: "info@BROTHERSPROTACTION.com",
+              label: "info@BROTHERSProtection.com",
             },
             {
               href: "https://wa.me/201003397852",
@@ -286,7 +286,7 @@ export default function Footer() {
         }}
       >
         <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>
-          © 2026 BROTHERS PROTACTION — جميع الحقوق محفوظة.
+          © 2026 BROTHERS Protection — جميع الحقوق محفوظة.
         </p>
         <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>
           متخصصون في حماية وعناية السيارات بأحدث التقنيات العالمية

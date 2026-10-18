@@ -304,7 +304,7 @@ ${formData.message}
           >
             <img
               src="\img\452863198_122094958910449527_15294905101800547_n.png"
-              alt=" Brothers Protaction
+              alt=" Brothers Protection
   logo"
               className="w-12 mb-4"
             />
@@ -340,9 +340,9 @@ ${formData.message}
             },
             {
               title: "البريد الإلكتروني",
-              value: "info@Brothers Protaction.com",
+              value: "info@Brothers Protection.com",
               icon: <AttachEmailIcon />,
-              link: "mailto:info@Brothers Protaction.com",
+              link: "mailto:info@Brothers Protection.com",
             },
             
           ].map((item, i) => (

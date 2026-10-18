@@ -55,7 +55,7 @@ export default function PPFPage() {
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight">
-              ما هي <span className="text-primary">أفلام الحماية PPF</span>؟
+              ما هي <span className="text-primary">أفلام حماية / Protecion film</span>؟
             </h1>
 
             <p
@@ -137,7 +137,7 @@ export default function PPFPage() {
             </h2>
 
             <p className="text-white/60 leading-8 text-sm md:text-base">
-              أفلام الحماية PPF هي طبقة شفافة عالية الجودة يتم تركيبها فوق طلاء
+              أفلام حماية / Protecion film هي طبقة شفافة عالية الجودة يتم تركيبها فوق طلاء
               السيارة لحمايته من الخدوش والأتربة والحصى والعوامل الجوية القاسية.
               تتميز هذه التقنية بأنها تحافظ على شكل السيارة الأصلي ولمعتها بدون
               التأثير على اللون أو التصميم.

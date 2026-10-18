@@ -86,7 +86,7 @@ export default function AboutSection() {
          <p className="text-black/70 leading-9 text-lg">
   برازر برودكشن هي الوكالة الحصرية لعدد من الشركات العالمية المرموقة في
   صناعة العناية بالسيارات. بفضل شراكتنا الاستراتيجية، قمنا بتقديم حلول
-  مبتكرة ومتطورة في مجالات أفلام الحماية والعزل الحراري وتقنيات النانو
+  مبتكرة ومتطورة في مجالات أفلام الحماية وعازل الحراري /  thermal insulation وتقنيات النانو
   والعناية الفائقة بالسيارات.
 </p>
     <motion.div
@@ -111,11 +111,11 @@ export default function AboutSection() {
         className="font-black text-2xl"
         style={{ marginTop: "10px", marginBottom: "12px" }}
       >
-        أفلام حماية تحمل هوية Brothers Protaction
+        أفلام حماية تحمل هوية Brothers Protection
       </h3>
 
       <p className="text-black/70 leading-8">
-        نقدم أفلام حماية عالية الجودة تحمل معايير Brothers Protaction
+        نقدم أفلام حماية عالية الجودة تحمل معايير Brothers Protection
         لتوفير أقصى درجات الحماية ضد الخدوش والعوامل الخارجية مع الحفاظ
         على المظهر الأصلي والفاخر للسيارة.
       </p>
@@ -207,7 +207,7 @@ export default function AboutSection() {
             marginBottom: "50px",
           }}
         >
-          لماذا <span className="text-primary">Brothers Protaction</span>
+          لماذا <span className="text-primary">Brothers Protection</span>
         </h2>
       </motion.div>
 
@@ -338,7 +338,7 @@ export default function AboutSection() {
             display: "inline-block",
           }}
         >
-          تعرف على BROTHERS PROTACTION
+          تعرف على BROTHERS Protection
         </button>
         </Link>
       </motion.div>

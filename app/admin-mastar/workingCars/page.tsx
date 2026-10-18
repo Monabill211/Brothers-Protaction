@@ -2,8 +2,7 @@
 
 import DashboardHeader from "../hedaer";
 import Sidebar from "../controipanel";
-import { useEffect, useState } from "react";
-import { supabase } from "@/app/lib/supabase";
+import { useState } from "react";
 
 type Car = {
   id: string;
@@ -20,50 +19,28 @@ type Car = {
   notes: string;
 };
 
+const INITIAL_CARS: Car[] = [
+  { id: "1",  car: "BMW X5 2022",             service: "PPF كامل",              total_price: 15000, paid: 10000, remaining: 5000, deliveredat: "2024-10-20", status: "جاري العمل عليها", salesman: "أحمد محمد",  nameownercar: "كريم عبدالله",  phone: "01012345678", notes: "" },
+  { id: "2",  car: "Mercedes GLE 2023",        service: "نانو سيراميك",          total_price: 9000,  paid: 8000,  remaining: 1000, deliveredat: "2024-10-18", status: "جاري العمل عليها", salesman: "محمود علي",  nameownercar: "سامي حسن",      phone: "01098765432", notes: "عميل VIP" },
+  { id: "3",  car: "Toyota Land Cruiser 2021", service: "تلميع + PPF جزئي",     total_price: 12000, paid: 6000,  remaining: 6000, deliveredat: "2024-10-22", status: "جاري العمل عليها", salesman: "كريم سامي",  nameownercar: "محمد الشافعي",  phone: "01155443322", notes: "" },
+  { id: "4",  car: "Range Rover Vogue 2022",   service: "عزل حراري كامل",       total_price: 7000,  paid: 6500,  remaining: 500,  deliveredat: "2024-10-19", status: "جاري العمل عليها", salesman: "محمود علي",  nameownercar: "هاني إبراهيم",  phone: "01567891234", notes: "تسليم عاجل" },
+  { id: "5",  car: "Lexus LX600 2023",         service: "PPF جزئي",              total_price: 8000,  paid: 7000,  remaining: 1000, deliveredat: "2024-10-21", status: "جاري العمل عليها", salesman: "أحمد محمد",  nameownercar: "طارق رضا",      phone: "01445566778", notes: "" },
+  { id: "6",  car: "Hyundai Palisade 2022",    service: "عزل حراري",             total_price: 5000,  paid: 2500,  remaining: 2500, deliveredat: "2024-10-23", status: "جاري العمل عليها", salesman: "كريم سامي",  nameownercar: "رامي خالد",     phone: "01890123456", notes: "يحتاج مواد إضافية" },
+];
+
 export default function Page() {
-  const [cars, setCars] = useState<Car[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [cars, setCars] = useState<Car[]>(INITIAL_CARS);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
 
-  useEffect(() => {
-    getCars();
-  }, []);
-
-  async function getCars() {
-    setLoading(true);
-    const { data, error } = await supabase
-      .from("cars")
-      .select("*")
-      .eq("status", "جاري العمل عليها")
-      .order("created_at", { ascending: false });
-
-    if (!error && data) setCars(data);
-    setLoading(false);
-  }
-
-  async function markAsDelivered(car: Car) {
+  function markAsDelivered(car: Car) {
     setUpdatingId(car.id);
-
-    const { error } = await supabase
-      .from("cars")
-      .update({
-        status: "تم التسليم",
-        paid: car.total_price,   // كل المبلغ بقى مدفوع
-        remaining: 0,            // المتبقي بقى صفر
-      })
-      .eq("id", car.id);
-
-    setUpdatingId(null);
-
-    if (error) {
-      alert("حصل خطأ: " + error.message);
-    } else {
-      // اشيل السيارة من القايمة فورًا لأنها بقت "تم التسليم"
+    setTimeout(() => {
       setCars((prev) => prev.filter((c) => c.id !== car.id));
-    }
+      setUpdatingId(null);
+    }, 800);
   }
 
-  const totalPaid = cars.reduce((acc, item) => acc + (item.paid ?? 0), 0);
+  const totalPaid   = cars.reduce((acc, item) => acc + (item.paid ?? 0), 0);
   const totalRemain = cars.reduce((acc, item) => acc + (item.remaining ?? 0), 0);
 
   return (
@@ -95,11 +72,11 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Loading / Empty */}
-        {loading ? (
-          <div className="text-center text-white/60" style={{ padding: "60px" }}>جاري التحميل...</div>
-        ) : cars.length === 0 ? (
-          <div className="text-center text-white/40" style={{ padding: "60px", fontSize: "1.1rem" }}>لا توجد سيارات قيد التنفيذ</div>
+        {/* Empty */}
+        {cars.length === 0 ? (
+          <div className="text-center text-white/40" style={{ padding: "60px", fontSize: "1.1rem" }}>
+            لا توجد سيارات قيد التنفيذ
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: "20px" }}>
             {cars.map((car) => (
@@ -113,7 +90,6 @@ export default function Page() {
                   <p><span className="font-bold text-primary">السيلز مان: </span>{car.salesman}</p>
                   <p><span className="font-bold text-primary">إجمالي السعر: </span>{car.total_price?.toLocaleString()} ج</p>
 
-                  {/* Paid / Remain */}
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginTop: "4px" }}>
                     <div style={{ background: "rgba(34,197,94,0.1)", borderRadius: "12px", padding: "10px", textAlign: "center" }}>
                       <p style={{ color: "#22c55e", fontWeight: 700, fontSize: "0.75rem", marginBottom: "4px" }}>المدفوع</p>
@@ -129,22 +105,15 @@ export default function Page() {
                   {car.notes && <p><span className="font-bold text-primary">ملاحظات: </span>{car.notes}</p>}
                 </div>
 
-                {/* Status + Button */}
                 <div style={{ marginTop: "16px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px" }}>
                   <span className="bg-yellow-500 px-4 py-2 rounded-full text-sm font-bold">جاري العمل</span>
-
                   <button
                     onClick={() => markAsDelivered(car)}
                     disabled={updatingId === car.id}
                     style={{
-                      flex: 1,
-                      padding: "10px",
-                      borderRadius: "12px",
-                      border: "none",
+                      flex: 1, padding: "10px", borderRadius: "12px", border: "none",
                       cursor: updatingId === car.id ? "not-allowed" : "pointer",
-                      fontWeight: 700,
-                      fontSize: "0.85rem",
-                      color: "#fff",
+                      fontWeight: 700, fontSize: "0.85rem", color: "#fff",
                       background: updatingId === car.id ? "rgba(34,197,94,0.4)" : "#22c55e",
                       transition: "background 0.2s",
                     }}

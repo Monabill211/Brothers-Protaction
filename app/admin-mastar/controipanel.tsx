@@ -82,7 +82,7 @@ export default function Sidebar() {
 
         {/* Bottom */}
         <div className="absolute bottom-6 right-0 left-0 text-center">
-          <p className="text-white/30 text-sm">BROTHERS PROTACTION © 2026</p>
+          <p className="text-white/30 text-sm">BROTHERS Protection © 2026</p>
         </div>
       </aside>
 

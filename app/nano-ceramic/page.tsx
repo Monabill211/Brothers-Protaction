@@ -61,7 +61,7 @@ export default function NanoCeramicPage() {
                 marginBottom: "24px",
               }}
             >
-              ما هو <span className="text-primary">النانو سيراميك</span>
+              ما هو <span className="text-primary">تغير لون السيارة /  Wrapping</span>
             </motion.h1>
 
             <motion.p
@@ -126,7 +126,7 @@ export default function NanoCeramicPage() {
             </h2>
 
             <p className="text-white/60 leading-9 text-sm md:text-base">
-              النانو سيراميك عبارة عن طبقة شفافة يتم تطبيقها على سطح السيارة
+              تغير لون السيارة /  Wrapping عبارة عن طبقة شفافة يتم تطبيقها على سطح السيارة
               لتوفير حماية قوية ضد الأتربة والمياه وأشعة الشمس والخدوش البسيطة،
               كما تمنح السيارة لمعانًا عميقًا ومظهرًا احترافيًا يدوم لفترات
               طويلة.
@@ -216,7 +216,7 @@ export default function NanoCeramicPage() {
             }}
           >
             <h2 className="text-4xl md:text-5xl font-black">
-              مميزات <span className="text-primary">النانو سيراميك</span>
+              مميزات <span className="text-primary">تغير لون السيارة /  Wrapping</span>
             </h2>
           </motion.div>
 

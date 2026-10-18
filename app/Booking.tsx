@@ -79,8 +79,8 @@ export default function Booking() {
         }}>
           احجز{" "}
           <span style={{
-            background: "linear-gradient(90deg,#DC2626,#F97316)",
-            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+            color:"red",
+            WebkitBackgroundClip: "text"
           }}>
             موعدك الآن
           </span>
@@ -98,7 +98,7 @@ export default function Booking() {
       {/* Main */}
       <div
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-center"
-        style={{ gap: "40px" }}
+        style={{ gap: "40px",margin:"auto" }}
       >
         {/* Form */}
         <motion.div
@@ -145,10 +145,10 @@ export default function Booking() {
               <Field label="الخدمة المطلوبة">
                 <select name="service" value={formData.service} onChange={handleChange} style={inputStyle}>
                   <option value="">اختر الخدمة</option>
-                  <option>أفلام حماية PPF</option>
-                  <option>عزل حراري</option>
-                  <option>نانو سيراميك</option>
-                  <option>فلم حماية برازر بروتراكشن</option>
+                  <option> أفلام حماية / Protecion film </option>
+                  <option> عازل الحراري /  thermal insulation </option>
+                  <option> تغير لون السيارة /  Wrapping </option>
+                  <option> فاميه حاجب الرؤية/  tinted windows </option>
                 </select>
               </Field>
             </div>

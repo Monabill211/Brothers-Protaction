@@ -47,7 +47,7 @@ export default function Page() {
               marginBottom: "18px",
             }}
           >
-            ABOUT BROTHERS PROTACTION
+            ABOUT BROTHERS Protection
           </motion.p>
 
           {/* Main Title */}
@@ -106,20 +106,20 @@ export default function Page() {
               </h2>
  
            <p className="text-white/70 leading-9 text-lg">
-  Brothers Protaction هي واحدة من الشركات الرائدة في مجال أفلام الحماية
+  Brothers Protection هي واحدة من الشركات الرائدة في مجال أفلام الحماية
   والعناية المتكاملة بالسيارات داخل مصر. تأسست الشركة بهدف تقديم مستوى
   احترافي عالمي يجمع بين الجودة العالية، التكنولوجيا الحديثة، والخبرة
   الكبيرة في حماية السيارات الفاخرة والرياضية.
 </p>
 
 <p className="text-white/70 leading-9 text-lg">
-  نستخدم أحدث التقنيات والخامات العالمية في تركيب أفلام الحماية PPF،
-  العزل الحراري، النانو سيراميك، والتلميع الاحترافي، لضمان الحفاظ على
+  نستخدم أحدث التقنيات والخامات العالمية في تركيب أفلام حماية / Protecion film،
+  عازل الحراري /  thermal insulation، تغير لون السيارة /  Wrapping، والتلميع الاحترافي، لضمان الحفاظ على
   سيارتك بأفضل شكل ممكن لأطول فترة.
 </p>
 
 <p className="text-white/70 leading-9 text-lg">
-  فريق Brothers Protaction مدرب على أعلى مستوى لتقديم تجربة احترافية
+  فريق Brothers Protection مدرب على أعلى مستوى لتقديم تجربة احترافية
   بداية من الاستشارة وحتى تسليم السيارة، مع اهتمام دقيق بأصغر التفاصيل
   وحرص كامل على رضا العميل وجودة التنفيذ.
 </p>
@@ -142,11 +142,11 @@ export default function Page() {
         className="font-black text-2xl text-primary"
         style={{ marginBottom: "10px" }}
       >
-        BROTHERS PROTACTION FILM
+        BROTHERS Protection FILM
       </h3>
 
       <p className="text-white/70 leading-8">
-        نقوم بتطوير وتركيب أفلام حماية تحمل هوية Brothers Protaction
+        نقوم بتطوير وتركيب أفلام حماية تحمل هوية Brothers Protection
         بمعايير عالمية وخامات عالية الجودة لتوفير أقصى درجات الحماية
         والمظهر الفاخر لسيارتك.
       </p>
@@ -307,7 +307,7 @@ export default function Page() {
         marginBottom: "20px",
       }}
     >
-      لماذا تختار <span className="text-primary">BROTHERS PROTACTION</span>
+      لماذا تختار <span className="text-primary">BROTHERS Protection</span>
     </h2>
 
     <p className="text-white/60 max-w-3xl mx-auto leading-8 text-sm md:text-base" style={{margin:"auto"}}>
@@ -329,7 +329,7 @@ export default function Page() {
         num: "01",
         title: "خامات أصلية",
         body:
-          "نستخدم أفضل خامات أفلام الحماية والعزل الحراري العالمية لضمان أعلى جودة وحماية تدوم لسنوات.",
+          "نستخدم أفضل خامات أفلام الحماية وعازل الحراري /  thermal insulation العالمية لضمان أعلى جودة وحماية تدوم لسنوات.",
       },
       {
         num: "02",

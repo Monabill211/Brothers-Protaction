@@ -11,7 +11,7 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: "أفلام الحماية | حماية فائقة لسيارتك",
   description:
-    "حلول حماية احترافية للسيارات: أفلام حماية الطلاء، العزل الحراري، النانو سيراميك والعناية الفائقة.",
+    "حلول حماية احترافية للسيارات: أفلام حماية الطلاء، عازل الحراري /  thermal insulation، تغير لون السيارة /  Wrapping والعناية الفائقة.",
 };
 
 export default function RootLayout({

@@ -61,7 +61,7 @@ export default function HeatIsolationPage() {
                 marginBottom: "24px",
               }}
             >
-              ما هو <span className="text-primary">العزل الحراري</span>
+              ما هو <span className="text-primary">عازل الحراري /  thermal insulation</span>
             </motion.h1>
 
             <motion.p
@@ -126,7 +126,7 @@ export default function HeatIsolationPage() {
             </h2>
 
             <p className="text-white/60 leading-9 text-sm md:text-base">
-              العزل الحراري هو طبقة احترافية يتم تركيبها على زجاج السيارة لتقليل
+              عازل الحراري /  thermal insulation هو طبقة احترافية يتم تركيبها على زجاج السيارة لتقليل
               دخول الحرارة وأشعة الشمس الضارة إلى داخل السيارة، مما يساعد على
               توفير أجواء أكثر راحة أثناء القيادة ويحافظ على المقصورة الداخلية
               من التلف والبهتان.
@@ -216,7 +216,7 @@ export default function HeatIsolationPage() {
             }}
           >
             <h2 className="text-4xl md:text-5xl font-black">
-              مميزات <span className="text-primary">العزل الحراري</span>
+              مميزات <span className="text-primary">عازل الحراري /  thermal insulation</span>
             </h2>
           </motion.div>
 
@@ -247,7 +247,7 @@ export default function HeatIsolationPage() {
 
               {
                 icon: <ShieldIcon />,
-                title: "حماية داخلية",
+                title: "",
                 text: "يحافظ على التابلوه والمقاعد من التلف والبهتان.",
               },
             ].map((item, i) => (

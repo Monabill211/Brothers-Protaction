@@ -68,7 +68,7 @@ export default function Navbar() {
                 background: "rgba(255,255,255,0.03)",
               }}
             >
-        <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protaction
+        <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protection
   logo" className="w-full" />
             </div>
 
@@ -81,7 +81,7 @@ export default function Navbar() {
                 }}
               >
                 <span style={{ color: "#df3939" }}>B</span>
-                <span style={{ color: "white" }}>ROTHERS PROTACTION</span>
+                <span style={{ color: "white" }}>ROTHERS PROTECTION</span>
               </h2>
 
               <p
@@ -241,7 +241,7 @@ export default function Navbar() {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-                <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protaction
+                <img src="\img\452863198_122094958910449527_15294905101800547_n.png" alt=" Brothers Protection
   logo" className="w-full" />
 
             </div>
@@ -254,7 +254,7 @@ export default function Navbar() {
                 }}
               >
                 <span style={{ color: "#df3939" }}>B</span>
-                <span style={{ color: "white" }}>ROTHERS PROTACTION</span>  
+                <span style={{ color: "white" }}>ROTHERS Protection</span>  
               </h2>
 
               <p

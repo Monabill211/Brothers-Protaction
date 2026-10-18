@@ -24,7 +24,7 @@ const projects = [
 
   {
     car: "Kia Carens",
-    service: "حماية Brothers Protaction",
+    service: "حماية Brothers Protection",
     video: "/img/vides/VID-20260602-WA0068.mp4",
   },
 
@@ -109,7 +109,7 @@ export default function page() {
         </h2>
 
         <p className="text-white/60 max-w-3xl mx-auto leading-8 text-sm md:text-base" style={{margin:"auto"}}>
-          بعض من أعمال BROTHERS PROTACTION في حماية وعناية السيارات بأعلى
+          بعض من أعمال BROTHERS Protection في حماية وعناية السيارات بأعلى
           جودة واحترافية.
         </p>
       </motion.div>
